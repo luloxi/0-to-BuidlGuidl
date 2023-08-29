@@ -100,7 +100,7 @@ const Home: NextPage = () => {
                 <Link href="https://github.com/features/copilot" className="underline">
                   GitHub Copilot
                 </Link>{" "}
-                (great for help with code within VS code, 10$/mo - unless you're a univ student)
+                (great for help with code within VS code, 10$/mo - unless you&apos;re a univ student)
               </li>
             </ul>
             <p className="text-xl max-w-lg">Suggested:</p>
