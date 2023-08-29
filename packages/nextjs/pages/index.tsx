@@ -20,10 +20,13 @@ const Home: NextPage = () => {
             <figcaption className="text-center">No copyright infringment intended.</figcaption>
           </figure>
           <div>
-            <h1 className="text-6xl">Earn a monthly ETH stream building public goods!</h1>
+            <h1 className="text-6xl text-center">Earn a monthly ETH stream building public goods!</h1>
             <p className="mt-6 text-lg">
               <strong className="text-red-500">New bulding web3?</strong> This compilation of{" "}
-              <strong>free learning resources</strong> will help you get started.
+              <Link className="underline" href="./learn">
+                free learning resources
+              </Link>{" "}
+              will help you get started.
               <p />
               <strong className="text-yellow-500">Got some web3 skills?</strong> Go to{" "}
               <Link className="underline" href="https://speedrunethereum.com/">
@@ -39,23 +42,26 @@ const Home: NextPage = () => {
               .
               <p />
               <strong className="text-green-500">After you join, build dApps</strong> for the Ethereum blockchain with{" "}
-              <Link className="underline" href="https://scaffoldeth.io/">
-                Scaffold-ETH 2
-              </Link>
-              , an open source toolkit.
+              <strong>
+                <Link className="underline" href="https://scaffoldeth.io/">
+                  Scaffold-ETH 2
+                </Link>
+                , an open source toolkit
+              </strong>
+              .
             </p>
             <p className="text-center text-2xl">
-              <strong>
-                Share your builds with{" "}
-                <Link className="underline" href="https://buidlguidl.com/">
-                  BuidlGuidl
-                </Link>{" "}
-                and the world, and earn some ETH!
-              </strong>
+              <strong>Share your builds</strong> with{" "}
+              <Link className="underline" href="https://buidlguidl.com/">
+                BuidlGuidl
+              </Link>{" "}
+              and the world, <strong>and earn some ETH!</strong>
             </p>
 
-            <div className="flex justify-around mt-6">
-              <button className="btn btn-error">Free Learning Resources</button>
+            <div className="flex flex-col lg:flex-row lg:justify-around mt-6 gap-3 items-center">
+              <Link className="underline" href="./learn">
+                <button className="btn btn-error">Free Learning Resources</button>
+              </Link>
               <Link className="underline" href="https://speedrunethereum.com/">
                 <button className="btn btn-warning">SpeedRunEthereum</button>
               </Link>

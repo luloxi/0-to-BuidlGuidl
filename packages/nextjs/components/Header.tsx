@@ -4,9 +4,9 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   Bars3Icon,
-  BoltIcon, // BugAntIcon,
+  BoltIcon,
+  BookOpenIcon, // BugAntIcon,
   HomeIcon,
-  PaintBrushIcon,
   ShareIcon, // SparklesIcon,
 } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
@@ -48,41 +48,30 @@ export const Header = () => {
           Home
         </NavLink>
       </li>
+      <li className="flex flex-row">
+        <NavLink href="/learn">
+          <BookOpenIcon className="h-4 w-4" />
+          Learn
+        </NavLink>
+      </li>
+      <li className="flex flex-row">
+        <NavLink href="/mint">
+          <BoltIcon className="h-4 w-4" />
+          Mint NFT
+        </NavLink>
+      </li>
 
       <li className="flex flex-row">
-        <NavLink href="/solidity">
-          <BoltIcon className="h-4 w-4" />
-          Solidity
-        </NavLink>
-      </li>
-      <li className="flex flex-row">
-        <NavLink href="/frontend">
-          <PaintBrushIcon className="h-4 w-4" />
-          Frontend
-        </NavLink>
-      </li>
-      <li className="flex flex-row">
-        <NavLink href="/easy-share">
+        <NavLink href="/share">
           <ShareIcon className="h-4 w-4" />
-          Easy share
+          Share
         </NavLink>
       </li>
+
       {/* <li>
         <NavLink href="/debug">
           <BugAntIcon className="h-4 w-4" />
           Debug Contracts
-        </NavLink>
-      </li> */}
-      {/* <li>
-        <NavLink href="/example-ui">
-          <SparklesIcon className="h-4 w-4" />
-          Example UI
-        </NavLink>
-      </li> */}
-      {/* <li>
-        <NavLink href="/blockexplorer">
-          <MagnifyingGlassIcon className="h-4 w-4" />
-          Block Explorer
         </NavLink>
       </li> */}
     </>
@@ -122,7 +111,7 @@ export const Header = () => {
             <span className="text-xs uppercase">Buidl & (l)earn!</span>
           </div>
         </Link>
-        <ul className="hidden lg:flex lg:flex-nowrap menu menu-horizontal px-1 gap-2">{navLinks}</ul>
+        <ul className="hidden lg:flex lg:flex-nowrap dropdown-content menu menu-horizontal px-1 gap-2">{navLinks}</ul>
       </div>
       <div className="navbar-end flex-grow mr-4">
         <RainbowKitCustomConnectButton />
