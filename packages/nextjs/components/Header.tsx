@@ -4,12 +4,10 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import {
   Bars3Icon,
-  BoltIcon,
-  BugAntIcon,
+  BoltIcon, // BugAntIcon,
   HomeIcon,
   PaintBrushIcon,
-  ShareIcon,
-  SparklesIcon,
+  ShareIcon, // SparklesIcon,
 } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
