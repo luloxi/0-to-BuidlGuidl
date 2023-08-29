@@ -7,14 +7,14 @@ const Home: NextPage = () => {
   return (
     <>
       <MetaHeader />
-      <div className="flex flex-col items-center ">
-        <h1 className="text-6xl my-6">Share this page!</h1>
+      <div className="flex flex-col items-center p-4">
+        <h1 className="text-6xl my-6 text-center">Share this page!</h1>
         <Image
           alt="QR code pointing to 0-to-buidlguidl.vercel.app"
           src="/qr.png"
           width={500}
           height={500}
-          className="max-w-sm rounded-lg shadow-2xl "
+          className="max-w-xs rounded-lg shadow-2xl "
         />
         <p>Add a way to easily copy the URL to this page and share to social buttons?</p>
       </div>

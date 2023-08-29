@@ -15,18 +15,18 @@ const Home: NextPage = () => {
               src="/experience.jpg"
               width={500}
               height={500}
-              className="max-w-sm rounded-lg shadow-2xl"
+              className="max-w-xs rounded-lg shadow-2xl"
             />
             <figcaption className="text-center">No copyright infringment intended.</figcaption>
           </figure>
           <div>
             <h1 className="text-6xl text-center">Earn a monthly ETH stream building public goods!</h1>
             <p className="mt-6 text-lg">
-              <strong className="text-red-500">New bulding web3?</strong> This compilation of{" "}
+              <strong className="text-red-500">New bulding web3?</strong> This roadmap of{" "}
               <Link className="underline" href="./learn">
                 free learning resources
               </Link>{" "}
-              will help you get started.
+              will get you started.
               <p />
               <strong className="text-yellow-500">Got some web3 skills?</strong> Go to{" "}
               <Link className="underline" href="https://speedrunethereum.com/">
