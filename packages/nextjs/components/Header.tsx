@@ -42,26 +42,26 @@ export const Header = () => {
 
   const navLinks = (
     <>
-      <li className="flex flex-row">
+      <li>
         <NavLink href="/">
           <HomeIcon className="h-4 w-4" />
           Home
         </NavLink>
       </li>
-      <li className="flex flex-row">
+      <li>
         <NavLink href="/learn">
           <BookOpenIcon className="h-4 w-4" />
           Learn
         </NavLink>
       </li>
-      <li className="flex flex-row">
+      <li>
         <NavLink href="/mint">
           <BoltIcon className="h-4 w-4" />
           Mint NFT
         </NavLink>
       </li>
 
-      <li className="flex flex-row">
+      <li>
         <NavLink href="/share">
           <ShareIcon className="h-4 w-4" />
           Share
