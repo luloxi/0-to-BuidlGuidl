@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
@@ -9,12 +10,18 @@ const Home: NextPage = () => {
       <div className="hero mt-6 bg-base-200">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <figure>
-            <img src="/experience.jpg" className="max-w-sm rounded-lg shadow-2xl" />
+            <Image
+              alt="Have experience? No, sir. I hope you will gain some here. You're hired."
+              src="/experience.jpg"
+              width={500}
+              height={500}
+              className="max-w-sm rounded-lg shadow-2xl"
+            />
             <figcaption className="text-center">No copyright infringment intended.</figcaption>
           </figure>
           <div>
             <h1 className="text-6xl">Earn a monthly ETH stream building public goods!</h1>
-            <p className="mt-6">
+            <p className="mt-6 text-lg">
               <strong className="text-red-500">New bulding web3?</strong> This compilation of{" "}
               <strong>free learning resources</strong> will help you get started.
               <p />
@@ -30,10 +37,8 @@ const Home: NextPage = () => {
                 </Link>
               </strong>
               .
-            </p>
-
-            <p className="">
-              After you join, <strong className="text-green-500">build dApps</strong> for the Ethereum blockchain with{" "}
+              <p />
+              <strong className="text-green-500">After you join, build dApps</strong> for the Ethereum blockchain with{" "}
               <Link className="underline" href="https://scaffoldeth.io/">
                 Scaffold-ETH 2
               </Link>
