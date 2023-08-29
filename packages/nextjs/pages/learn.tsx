@@ -1,15 +1,14 @@
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import type { NextPage } from "next";
-import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
 
 const Home: NextPage = () => {
   return (
     <>
       <MetaHeader />
-      <div className="flex flex-col items-center">
-        <h1 className="mt-6 text-6xl">Learn the web3 tech stack!</h1>
+      <div className="flex flex-col items-center mt-6 ">
+        <h1 className="text-6xl">Learn the web3 tech stack!</h1>
         <p className="text-xl max-w-lg">
           To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
           started:

@@ -1,14 +1,14 @@
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import type { NextPage } from "next";
-import { BugAntIcon, MagnifyingGlassIcon, SparklesIcon } from "@heroicons/react/24/outline";
 import { MetaHeader } from "~~/components/MetaHeader";
 
 const Home: NextPage = () => {
   return (
     <>
       <MetaHeader />
-      <div className="flex flex-col items-center mt-6">
+      <div className="flex flex-col items-center ">
+        <h1 className="text-6xl my-6">Share this page!</h1>
         <Image
           alt="QR code pointing to 0-to-buidlguidl.vercel.app"
           src="/qr.png"
