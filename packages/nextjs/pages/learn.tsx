@@ -9,8 +9,8 @@ const Home: NextPage = () => {
       <div className="flex flex-col items-center mt-6 p-4">
         <h1 className="text-6xl">Learn the web3 tech stack!</h1>
         <div className="flex flex-row items-center gap-3">
-          <div>
-            <p className="text-xl max-w-lg">
+          <div className="max-w-lg">
+            <p className="text-xl ">
               To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
               started:
             </p>
@@ -33,6 +33,22 @@ const Home: NextPage = () => {
                 </Link>{" "}
                 (3 hs video)
               </li>
+              <br />
+              <li>
+                <Link
+                  href="https://www.youtube.com/watch?v=zuJ-elbo88E&list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69"
+                  className="underline"
+                >
+                  Web2 to Web3 playlist by BuidlGuidl
+                </Link>{" "}
+                (from theory to completing SpeedRunEthereum challenges and entering BuidlGuidl)
+              </li>
+              <li>
+                <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" className="underline">
+                  Scaffold-ETH - general developer chat
+                </Link>{" "}
+                (Telegram)
+              </li>
             </ul>
           </div>
 
@@ -51,11 +67,71 @@ const Home: NextPage = () => {
             <ul>
               <li>- know about smart contracts and web3</li>
               <li>- develop your own smart contracts</li>
-              <li>- create a frontend that interacts with smart contracts</li>
-              <li>- make that frontend look nice</li>
+              <li>- create frontends that can react to smart contracts</li>
+              <li>- make your frontend interact with smart contracts</li>
+              <li>- make your frontend look nice </li>
             </ul>
           </div>
           <span className="inline-block h-6 align-middle ml-2 text-7xl">🐥</span>
+        </div>
+      </div>
+      <div className="flex flex-col items-center mt-6 p-4">
+        <h2 className="text-3xl">Use AI as a pair programmer and learning buddy</h2>
+        <div className="flex flex-row items-center gap-3">
+          <div className="max-w-lg">
+            <p className="text-xl max-w-lg">Reccomended:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://chat.openai.com/" className="underline">
+                  ChatGPT
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://www.phind.com/" className="underline">
+                  Phind
+                </Link>{" "}
+                (AI search engine for developers)
+              </li>
+
+              <li>
+                -{" "}
+                <Link href="https://github.com/features/copilot" className="underline">
+                  GitHub Copilot
+                </Link>{" "}
+                (great for help with code within VS code, 10$/mo - unless you're a univ student)
+              </li>
+            </ul>
+            <p className="text-xl max-w-lg">Suggested:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/watch?v=jHv63Uvk5VA" className="underline">
+                  Complete ChatGPT Tutorial - [Become A Power User in 30 Minutes]
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/watch?v=iR99LO28nzM" className="underline">
+                  Uploading Files to ChatGPT: A More Powerful Experience
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/watch?v=RkK6CgOTLqA" className="underline">
+                  5 Ways To Use ChatGPT To Build Your Website
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/watch?v=GizsSo-EevA" className="underline">
+                  Use ChatGPT to Code a Full Stack App – Full Course
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+          <span className="inline-block h-6 align-middle ml-2 text-7xl">🤖</span>
         </div>
       </div>
       <div className="flex flex-col items-center mt-6 p-4">
@@ -144,6 +220,13 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
+                <Link href="https://www.youtube.com/watch?v=FJDVKeh7RJI&t" className="underline">
+                  React & TypeScript - Course for Beginners
+                </Link>{" "}
+                (1:30 hs course)
+              </li>
+              <li>
+                -{" "}
                 <Link href="https://www.youtube.com/watch?v=bMknfKXIFA8" className="underline">
                   React Course - Beginner&apos;s Tutorial for React JavaScript Library [2022]
                 </Link>{" "}
@@ -167,8 +250,52 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col items-center mt-6 p-4">
-        <h2 className="text-3xl">Learn frontend styling frameworks...</h2>
+        <h2 className="text-3xl">Make your frontend interact with smart contracts...</h2>
         <div className="flex flex-row items-center gap-3">
+          <div className="max-w-lg">
+            <p className="text-xl max-w-lg">Learn some Scaffold-ETH 2 hooks and Wagmi:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline">
+                  Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://wagmi.sh/core/getting-started" className="underline">
+                  Wagmi - Getting started
+                </Link>{" "}
+              </li>
+            </ul>
+            <p className="text-xl max-w-lg">Other options:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
+                  Viem - Getting Started
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
+                  RainbowKit - Introduction
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://docs.ethers.org/v6/" className="underline">
+                  Ethers - Documentation
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+          <span className="inline-block h-6 align-middle ml-2 text-7xl">🦃</span>
+        </div>
+      </div>
+      <div className="flex flex-col items-center mt-6 p-4 ">
+        <h2 className="text-3xl">Learn frontend styling frameworks...</h2>
+        <div className="flex flex-row items-center gap-3 ">
           <div className="max-w-lg">
             <p className="text-xl max-w-lg">Learn some TailwindCSS and daisyUI:</p>
             <ul>

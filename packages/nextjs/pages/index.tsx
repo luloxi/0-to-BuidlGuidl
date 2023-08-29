@@ -58,7 +58,7 @@ const Home: NextPage = () => {
               and the world, <strong>and earn some ETH!</strong>
             </p>
 
-            <div className="flex flex-col lg:flex-row lg:justify-around mt-6 gap-3 items-center">
+            <div className="flex flex-col lg:flex-row lg:justify-center mt-8 gap-6 items-center">
               <Link className="underline" href="./learn">
                 <button className="btn btn-error">Free Learning Resources</button>
               </Link>
