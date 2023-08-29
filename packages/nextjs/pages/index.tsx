@@ -65,6 +65,9 @@ const Home: NextPage = () => {
               <Link className="underline" href="https://speedrunethereum.com/">
                 <button className="btn btn-warning">SpeedRunEthereum</button>
               </Link>
+              <Link className="underline" href="./share">
+                <button className="btn btn-success">Share this page</button>
+              </Link>
             </div>
           </div>
         </div>

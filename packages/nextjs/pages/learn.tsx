@@ -43,6 +43,7 @@ const Home: NextPage = () => {
                 </Link>{" "}
                 (from theory to completing SpeedRunEthereum challenges and entering BuidlGuidl)
               </li>
+              <br />
               <li>
                 <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" className="underline">
                   Scaffold-ETH - general developer chat
@@ -62,14 +63,18 @@ const Home: NextPage = () => {
         <div className="flex flex-row items-center gap-3">
           <div>
             <p className="text-xl max-w-lg">
-              To create production ready dApps from scratch using Scaffold-ETH, you need to:
+              To create production ready dApps from scratch using{" "}
+              <Link className="underline" href="https://scaffoldeth.io/">
+                Scaffold-ETH 2
+              </Link>
+              , you need to:
             </p>
             <ul>
-              <li>- know about smart contracts and web3</li>
-              <li>- develop your own smart contracts</li>
+              <li>- know how to read, edit and write smart contracts</li>
               <li>- create frontends that can react to smart contracts</li>
-              <li>- make your frontend interact with smart contracts</li>
-              <li>- make your frontend look nice </li>
+              <li>- make frontends interact with smart contracts</li>
+              <li>- make frontends look nice (optional) </li>
+              <li>- use all that knowledge in a single build! </li>
             </ul>
           </div>
           <span className="inline-block h-6 align-middle ml-2 text-7xl">🐥</span>
@@ -135,7 +140,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className="flex flex-col items-center mt-6 p-4">
-        <h2 className="text-3xl">Let&apos;s learn about smart contracts then...</h2>
+        <h2 className="text-3xl">Learn about smart contracts...</h2>
         <div className="flex flex-row items-center gap-3">
           <div className="max-w-lg">
             <p className="text-xl max-w-lg">Take at least one of these courses:</p>
@@ -158,7 +163,7 @@ const Home: NextPage = () => {
                 (32 hs course)
               </li>
             </ul>
-            <p className="text-xl max-w-lg">Other options:</p>
+            <p className="text-xl max-w-lg">Other resources:</p>
             <ul>
               <li>
                 -{" "}
@@ -216,7 +221,7 @@ const Home: NextPage = () => {
                 (5 hs course)
               </li>
             </ul>
-            <p className="text-xl max-w-lg">Other options:</p>
+            <p className="text-xl max-w-lg">Other resources:</p>
             <ul>
               <li>
                 -{" "}
@@ -268,12 +273,12 @@ const Home: NextPage = () => {
                 </Link>{" "}
               </li>
             </ul>
-            <p className="text-xl max-w-lg">Other options:</p>
+            <p className="text-xl max-w-lg">More tools:</p>
             <ul>
               <li>
                 -{" "}
-                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
-                  Viem - Getting Started
+                <Link href="https://docs.ethers.org/v6/" className="underline">
+                  Ethers - Documentation
                 </Link>{" "}
               </li>
               <li>
@@ -284,8 +289,8 @@ const Home: NextPage = () => {
               </li>
               <li>
                 -{" "}
-                <Link href="https://docs.ethers.org/v6/" className="underline">
-                  Ethers - Documentation
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
+                  Viem - Getting Started
                 </Link>{" "}
               </li>
             </ul>
@@ -319,7 +324,7 @@ const Home: NextPage = () => {
                 </Link>{" "}
               </li>
             </ul>
-            <p className="text-xl max-w-lg">Other options:</p>
+            <p className="text-xl max-w-lg">Alternative:</p>
             <ul>
               <li>
                 -{" "}
