@@ -6,15 +6,43 @@ const Home: NextPage = () => {
   return (
     <>
       <MetaHeader />
-      <div className="flex flex-col items-center p-4 bg-primary ">
+
+      <div className="flex flex-col items-center p-4 bg-primary">
         <h1 className="text-6xl text-center">Learn the ETH tech stack!</h1>
         <p className="text-xl max-w-lg">
           To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
           started:
         </p>
-        <div className="flex flex-row items-center gap-6">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🐣</span>
-          <div className="max-w-lg ">
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl">🐣</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <ul>
+              <li>
+                <Link
+                  href="https://www.youtube.com/watch?v=zuJ-elbo88E&list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69"
+                  className="underline"
+                >
+                  Web2 to Web3 YouTube playlist
+                </Link>{" "}
+                (from theory to completing SpeedRunEthereum challenges and entering BuidlGuidl)
+              </li>
+
+              <li>
+                <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" className="underline">
+                  Scaffold-ETH - general developer chat
+                </Link>{" "}
+                (Telegram)
+              </li>
+            </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
             <ul>
               <li>
                 <Link href="https://ethereum.foundation/ethereum" className="underline">
@@ -34,33 +62,17 @@ const Home: NextPage = () => {
                 </Link>{" "}
                 (3 hs video)
               </li>
-              <br />
-              <li>
-                <Link
-                  href="https://www.youtube.com/watch?v=zuJ-elbo88E&list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69"
-                  className="underline"
-                >
-                  Web2 to Web3 playlist by BuidlGuidl
-                </Link>{" "}
-                (from theory to completing SpeedRunEthereum challenges and entering BuidlGuidl)
-              </li>
-              <br />
-              <li>
-                <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" className="underline">
-                  Scaffold-ETH - general developer chat
-                </Link>{" "}
-                (Telegram)
-              </li>
             </ul>
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center p-4 ">
+
+      <div className="flex flex-col items-center p-4 text-success bg-black">
         <h2 className="text-3xl text-center">
           Got the basics, <strong>now what?</strong>
         </h2>
         <div className="flex flex-row items-center gap-3">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🐥</span>
+          <span className="text-8xl">🐥</span>
 
           <div>
             <p className="text-xl max-w-lg">
@@ -80,11 +92,18 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
       <div className="flex flex-col items-center p-4 bg-secondary">
-        <h2 className="text-3xl text-center">Use AI as a pair programmer and learning buddy</h2>
-        <div className="flex flex-row items-center gap-3">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🤖</span>
-          <div className="max-w-lg">
+        <h2 className="text-4xl text-center">Use AI as a pair programmer and learning buddy</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🤖</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
             <p className="text-xl max-w-lg">Reccomended:</p>
             <ul>
               <li>
@@ -109,6 +128,10 @@ const Home: NextPage = () => {
                 (great for help with code within VS code, 10$/mo - unless you&apos;re a university student)
               </li>
             </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
             <p className="text-xl max-w-lg">Suggested:</p>
             <ul>
               <li>
@@ -145,11 +168,19 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
       <div className="flex flex-col items-center p-4 bg-primary">
-        <h2 className="text-3xl text-center">Learn Solidity (smart contracts)...</h2>
-        <div className="flex flex-row items-center gap-3">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🐤</span>
-          <div className="max-w-lg">
+        <h2 className="text-4xl text-center">Learn Solidity (smart contracts)...</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🐤</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            {" "}
             <p className="text-xl max-w-lg">Take at least one of these courses:</p>
             <ul>
               <li>
@@ -170,6 +201,11 @@ const Home: NextPage = () => {
                 (32 hs course)
               </li>
             </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            {" "}
             <p className="text-xl max-w-lg">Other resources:</p>
             <ul>
               <li>
@@ -206,11 +242,18 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center p-4 ">
-        <h2 className="text-3xl">Learn modern frontend development...</h2>
-        <div className="flex flex-row items-center gap-3">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🐔</span>
-          <div className="max-w-lg">
+
+      <div className="flex flex-col items-center p-4">
+        <h2 className="text-4xl text-center">Learn modern frontend development...</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🐔</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
             <p className="text-xl max-w-lg">Learn React, Next.js and TypeScript:</p>
             <ul>
               <li>
@@ -235,6 +278,10 @@ const Home: NextPage = () => {
                 (1:30 hs course)
               </li>
             </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
             <p className="text-xl max-w-lg">Other resources:</p>
             <ul>
               <li>
@@ -272,12 +319,19 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
       <div className="flex flex-col items-center p-4 bg-secondary">
-        <h2 className="text-3xl">Make your frontend interact with smart contracts...</h2>
-        <div className="flex flex-row items-center gap-3">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🦃</span>
-          <div className="max-w-lg">
-            <p className="text-xl max-w-lg">Learn some Scaffold-ETH 2 hooks and Wagmi:</p>
+        <h2 className="text-4xl text-center">Make your frontend interact with smart contracts...</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🦃</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <p className="text-xl max-w-lg">Learn Scaffold-ETH 2 and Wagmi hooks:</p>
             <ul>
               <li>
                 -{" "}
@@ -292,7 +346,11 @@ const Home: NextPage = () => {
                 </Link>{" "}
               </li>
             </ul>
-            <p className="text-xl max-w-lg">More tools:</p>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            <p className="text-xl">More tools:</p>
             <ul>
               <li>
                 -{" "}
@@ -316,12 +374,20 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+
       <div className="flex flex-col items-center p-4 bg-primary">
-        <h2 className="text-3xl">Learn frontend styling frameworks...</h2>
-        <div className="flex flex-row items-center gap-3 ">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🦚</span>
-          <div className="max-w-lg">
-            <p className="text-xl max-w-lg">Learn some TailwindCSS and daisyUI:</p>
+        <h2 className="text-4xl text-center">Learn frontend styling frameworks...</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🦚</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            {" "}
+            <p className="text-xl">Learn some TailwindCSS and daisyUI:</p>
             <ul>
               <li>
                 -{" "}
@@ -343,6 +409,11 @@ const Home: NextPage = () => {
                 </Link>{" "}
               </li>
             </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            {" "}
             <p className="text-xl max-w-lg">Alternative:</p>
             <ul>
               <li>
@@ -371,12 +442,110 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center p-4 ">
-        <h2 className="text-3xl">Get started creating dApps!</h2>
-        <div className="flex flex-row items-center gap-3 ">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🏗️</span>
-          <div className="max-w-lg">
-            <p className="text-xl max-w-lg">See Scaffold-ETH 2 in action:</p>
+
+      <div className="flex flex-col items-center p-6 bg-black text-indigo-300">
+        <h2 className="text-4xl text-center">Let’s get you that 0.5 ETH stream now!</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6" min-w-full>
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🏰</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <p className="text-xl ">
+              To get rewarded, you must be <strong>meaningfully contributing to the ecosystem</strong> in some ways:
+            </p>
+            <ul>
+              <li>
+                🖋 <strong>Contribute on Github</strong> by creating issues, creating PRs, creating your own branch with
+                a ReadMe to help others learn something new, etc...
+              </li>
+              <li>
+                📬 Stay active on the Telegram channels to <strong>assist others</strong>
+              </li>
+              <li>
+                💡 Have an idea for a prototype?{" "}
+                <strong>Create a new branch or start fresh with scaffold-ETH2 and make it happen!</strong>
+              </li>
+              <li>
+                🎨 <strong>Create cool designs</strong>, <strong>BuidlGuidl articles</strong> or{" "}
+                <strong>walk-throughs</strong>!
+              </li>
+              <li>
+                🧹 Good at front end? There are always <strong>prototypes that need a good UI/UX</strong>!{" "}
+              </li>
+            </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            {" "}
+            <p className="text-xl max-w-lg">Use GitHub to collaborate with peers:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link
+                  href="https://www.youtube.com/watch?v=RGOj5yH7evk&list=PLLJ1hZKyeCH1I8dP0UNTpWoIhsl6KpVbu&index=3"
+                  className="underline"
+                >
+                  Git and GitHub for Beginners - Crash Course
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://skills.github.com/" className="underline">
+                  GitHub Skills
+                </Link>{" "}
+                - Interactive courses designed by GitHub
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://desktop.github.com/" className="underline">
+                  GitHub Desktop
+                </Link>{" "}
+                (
+                <Link href="https://github.com/muroko/github-desktop-linux" className="underline">
+                  Linux version
+                </Link>
+                )
+              </li>
+            </ul>
+            <p className="text-xl ">Learn more about streams:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link
+                  className="underline"
+                  href="https://mirror.xyz/news.buidlguidl.eth/O_Gc84QO4TjvxJnunkRr-s-It1qBTK7TMlJcWf4FQ_I"
+                >
+                  BuidlGuidl FAQ
+                </Link>
+              </li>
+              <li>
+                -{" "}
+                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk">
+                  BG Labs - BG Streams, Onboarding, and Psychology
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center p-6 bg-secondary">
+        <h2 className="text-4xl text-center">Get started creating dApps!</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🏗️</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <p className="text-xl">See Scaffold-ETH 2 in action:</p>
             <ul>
               <li>
                 -{" "}
@@ -400,6 +569,11 @@ const Home: NextPage = () => {
                 (1:30 hs video)
               </li>
             </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            {" "}
             <p className="text-xl max-w-lg">More resources:</p>
             <ul>
               <li>
@@ -431,59 +605,11 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center p-4 bg-secondary">
-        <h2 className="text-3xl">Let’s get you that 0.5 ETH stream now!</h2>
-        <div className="flex flex-row items-center gap-3 ">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🏰</span>
-          <div className="max-w-lg">
-            <p className="text-xl ">
-              To get rewarded, you must be <strong>meaningfully contributing to the ecosystem</strong> in some ways:
-            </p>
-            <ul>
-              <li>
-                🖋 <strong>Contribute on Github</strong> by creating issues, creating PRs, creating your own branch with
-                a ReadMe to help others learn something new, etc...
-              </li>
-              <li>
-                📬 Stay active on the Telegram channels to <strong>assist others</strong>
-              </li>
-              <li>
-                💡 Have an idea for a prototype?{" "}
-                <strong>Create a new branch or start fresh with scaffold-ETH2 and make it happen!</strong>
-              </li>
-              <li>
-                🎨 <strong>Create cool designs</strong>, <strong>BuidlGuidl articles</strong> or{" "}
-                <strong>walk-throughs</strong>!
-              </li>
-              <li>
-                🧹 Good at front end? There are always <strong>prototypes that need a good UI/UX</strong>!{" "}
-              </li>
-            </ul>
-            <p className="text-xl ">Learn more about streams:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link
-                  className="underline"
-                  href="https://mirror.xyz/news.buidlguidl.eth/O_Gc84QO4TjvxJnunkRr-s-It1qBTK7TMlJcWf4FQ_I"
-                >
-                  BuidlGuidl FAQ
-                </Link>
-              </li>
-              <li>
-                -{" "}
-                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk">
-                  BG Labs - BG Streams, Onboarding, and Psychology
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className="flex flex-col items-center p-4 bg-primary">
+
+      <div className="flex flex-col items-center p-4 bg-black text-warning">
         <h2 className="text-3xl">Don&apos;t know what to build?</h2>
         <div className="flex flex-row items-center gap-3 ">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">💡</span>
+          <span className="text-8xl">💡</span>
           <div className="max-w-lg">
             <p className="text-xl ">You can get some ideas from here:</p>
             <ul>
@@ -518,12 +644,19 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className="flex flex-col items-center p-4 ">
-        <h2 className="text-3xl">More resources!</h2>
-        <div className="flex flex-row items-center gap-3 ">
-          <span className="inline-block h-6 align-middle ml-2 text-7xl">🍰</span>
-          <div className="max-w-lg">
-            <p className="text-xl max-w-lg">Learn about why all this is important and useful:</p>
+
+      <div className="flex flex-col items-center p-4">
+        <h2 className="text-4xl">More resources!</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🍰</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <p className="text-xl ">Learn about why all this is important and useful:</p>
             <ul>
               <li>
                 -{" "}
@@ -533,7 +666,7 @@ const Home: NextPage = () => {
                 (book on online culture, community, politics, economy, etc…)
               </li>
             </ul>
-            <p className="text-xl max-w-lg">Learn more about Solidity:</p>
+            <p className="text-xl">Learn more about Solidity:</p>
             <ul>
               <li>
                 -{" "}
@@ -555,37 +688,11 @@ const Home: NextPage = () => {
                 </Link>{" "}
               </li>
             </ul>
-            <p className="text-xl max-w-lg">Use GitHub to collaborate with peers:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link
-                  href="https://www.youtube.com/watch?v=RGOj5yH7evk&list=PLLJ1hZKyeCH1I8dP0UNTpWoIhsl6KpVbu&index=3"
-                  className="underline"
-                >
-                  Git and GitHub for Beginners - Crash Course
-                </Link>{" "}
-                (1 hour video)
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://skills.github.com/" className="underline">
-                  GitHub Skills
-                </Link>{" "}
-                - Learn how to use GitHub with interactive courses designed for beginners and experts.
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://desktop.github.com/" className="underline">
-                  GitHub Desktop
-                </Link>{" "}
-                (
-                <Link href="https://github.com/muroko/github-desktop-linux" className="underline">
-                  Linux version
-                </Link>
-                )
-              </li>
-            </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            {" "}
             <p className="text-xl max-w-lg">Learn Docker and GraphQL:</p>
             <ul>
               <li>

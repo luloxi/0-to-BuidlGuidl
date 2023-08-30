@@ -22,7 +22,7 @@ const Home: NextPage = () => {
           <div>
             <h1 className="text-6xl text-center">Earn a monthly ETH stream building public goods!</h1>
             <p className="mt-6 text-lg">
-              <strong className="text-red-500">New bulding web3?</strong> This roadmap of{" "}
+              <strong className="text-red-500">New building web3?</strong> This roadmap of{" "}
               <Link className="underline" href="./learn">
                 free learning resources
               </Link>{" "}
