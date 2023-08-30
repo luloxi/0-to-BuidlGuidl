@@ -28,7 +28,7 @@ const Home: NextPage = () => {
               </Link>{" "}
               will get you started.
               <p />
-              <strong className="text-yellow-500">Got some web3 skills?</strong> Go to{" "}
+              <strong className="text-yellow-500">Got web3 skills?</strong> Go to{" "}
               <Link className="underline" href="https://speedrunethereum.com/">
                 SpeedRunEthereum
               </Link>{" "}

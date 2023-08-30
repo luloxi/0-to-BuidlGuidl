@@ -523,6 +523,16 @@ const Home: NextPage = () => {
         <div className="flex flex-row items-center gap-3 ">
           <span className="inline-block h-6 align-middle ml-2 text-7xl">🍰</span>
           <div className="max-w-lg">
+            <p className="text-xl max-w-lg">Learn about why all this is important and useful:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://thenetworkstate.com/" className="underline">
+                  The Network State
+                </Link>{" "}
+                (book on online culture, community, politics, economy, etc…)
+              </li>
+            </ul>
             <p className="text-xl max-w-lg">Learn more about Solidity:</p>
             <ul>
               <li>
@@ -596,17 +606,6 @@ const Home: NextPage = () => {
                 <Link href="https://learnweb3.io/lessons/docker-essentials/" className="underline">
                   Docker Essentials - LearnWeb3
                 </Link>{" "}
-              </li>
-            </ul>
-
-            <p className="text-xl max-w-lg">Learn about why all this is important and useful:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link href="https://thenetworkstate.com/" className="underline">
-                  The Network State
-                </Link>{" "}
-                (book on online culture, community, politics, economy, etc…)
               </li>
             </ul>
           </div>
