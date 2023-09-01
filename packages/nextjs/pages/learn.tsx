@@ -7,7 +7,7 @@ const Home: NextPage = () => {
     <>
       <MetaHeader />
       {/* Intro */}
-      <div className="flex flex-col items-center p-4">
+      <div className="flex flex-col items-center pt-4">
         <h1 className="text-5xl text-center ">Learn the ETH tech stack!</h1>
         <p className="text-xl max-w-lg">
           To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
       </div>
 
       {/* 0. Intro */}
-      <div className="flex flex-col items-center p-4 bg-primary">
+      <div className="flex flex-col items-center pb-4 bg-primary">
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/3 flex justify-center">
