@@ -30,7 +30,7 @@ const Home: NextPage = () => {
           src="/qr.png"
           width={500}
           height={500}
-          className="max-w-xs rounded-lg shadow-2xl "
+          className="max-w-xs rounded-lg "
         />
         <div className="flex items-center my-4 space-x-2">
           <input

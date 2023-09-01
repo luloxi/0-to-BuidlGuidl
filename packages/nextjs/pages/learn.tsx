@@ -99,7 +99,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🤖</span>
+            <span className="text-5xl pt-4">🐥 + 🤖</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
@@ -443,7 +443,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🏗️</span>
+            <span className="text-8xl pt-4">🍗</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
@@ -686,7 +686,16 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
-            {" "}
+            <p className="text-xl max-w-lg">Learn on the go:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://www.freecodecamp.org/learn" className="underline">
+                  freeCodeCamp
+                </Link>{" "}
+                - Reccomended JavaScript Algorithms and Data Structures, and Front End Development Libraries
+              </li>
+            </ul>
             <p className="text-xl max-w-lg">Learn Docker and GraphQL:</p>
             <ul>
               <li>
