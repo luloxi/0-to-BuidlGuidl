@@ -69,6 +69,17 @@ const Home: NextPage = () => {
                 <button className="btn btn-success">Share this page</button>
               </Link>
             </div>
+
+            <div className="text-center mt-8">
+              <Link className="underline underline-offset-4" href="https://github.com/luloxi/0-to-BuidlGuidl">
+                Repo
+              </Link>{" "}
+              made by{" "}
+              <Link href="https://twitter.com/LuloxEth" className="underline underline-offset-4">
+                Lulox
+              </Link>{" "}
+              🐱
+            </div>
           </div>
         </div>
       </div>
