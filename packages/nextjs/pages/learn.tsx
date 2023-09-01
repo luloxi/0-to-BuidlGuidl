@@ -6,7 +6,7 @@ const Home: NextPage = () => {
   return (
     <>
       <MetaHeader />
-
+      {/* Intro */}
       <div className="flex flex-col items-center p-4">
         <h1 className="text-5xl text-center ">Learn the ETH tech stack!</h1>
         <p className="text-xl max-w-lg">
@@ -14,6 +14,8 @@ const Home: NextPage = () => {
           started:
         </p>
       </div>
+
+      {/* 0. Intro */}
       <div className="flex flex-col items-center p-4 bg-primary">
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
@@ -50,14 +52,22 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 1. Roadmap */}
       <div className="flex flex-col items-center p-4 bg-slate-900 text-warning">
         <h2 className="text-4xl text-center">
           Got the basics, <strong>now what?</strong>
         </h2>
-        <div className="flex flex-row items-center gap-3">
-          <span className="text-8xl">🐥</span>
+        <div className="flex flex-col md:flex-row items-center gap-6 ">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/3 flex justify-center">
+            <span className="text-8xl pt-4">🐥</span>
+          </div>
 
-          <div>
+          {/* This div will be in the middle on larger screens */}
+          {/* <div className="md:w-1/2"></div> */}
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-2/3">
             <p className="text-xl max-w-lg">
               To create production ready dApps from scratch using{" "}
               <Link className="underline" href="https://scaffoldeth.io/">
@@ -76,13 +86,14 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 2. AI */}
       <div className="flex flex-col items-center p-4 bg-secondary">
         <h2 className="text-4xl text-center">Use AI as a pair programmer and learning buddy</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
-            <span className="text-5xl pt-4">🐥 + 🤖</span>
+            <span className=" text-5xl pt-4">🐥 + 🤖</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
@@ -152,6 +163,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 3. Frontend */}
       <div className="flex flex-col items-center p-4">
         <h2 className="text-4xl text-center">Learn modern frontend development...</h2>
 
@@ -223,7 +235,8 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center p-4 bg-secondary">
+      {/* 4. Styling */}
+      <div className="flex flex-col items-center p-4 bg-primary">
         <h2 className="text-4xl text-center">Learn frontend styling frameworks...</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
@@ -291,7 +304,8 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center p-4 bg-primary">
+      {/* 5. Solidity */}
+      <div className="flex flex-col items-center p-4 bg-secondary">
         <h2 className="text-4xl text-center">Learn Solidity (smart contracts)...</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
@@ -383,6 +397,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 6. Frontend hooks */}
       <div className="flex flex-col items-center p-4 ">
         <h2 className="text-4xl text-center">Make your frontend interact with smart contracts...</h2>
 
@@ -413,7 +428,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
-            <p className="text-xl">More tools:</p>
+            <p className="text-xl ">More tools:</p>
             <ul>
               <li>
                 -{" "}
@@ -438,6 +453,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 7. dApp tutorials */}
       <div className="flex flex-col items-center p-6 bg-primary">
         <h2 className="text-4xl text-center">Get started creating dApps!</h2>
 
@@ -510,6 +526,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 8. BuildGuidl intro */}
       <div className="flex flex-col items-center p-6 bg-slate-950 text-success">
         <h2 className="text-4xl text-center">Let’s get you that 0.5 ETH stream now!</h2>
 
@@ -601,11 +618,20 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 9. Build ideas */}
       <div className="flex flex-col items-center p-4 bg-slate-900 text-warning">
-        <h2 className="text-4xl">Don&apos;t know what to build?</h2>
-        <div className="flex flex-row items-center gap-3 ">
-          <span className="text-8xl">💡</span>
-          <div className="max-w-lg">
+        <h2 className="text-4xl text-center">Don&apos;t know what to build?</h2>
+        <div className="flex flex-col md:flex-row items-center gap-6 ">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/3 flex justify-center">
+            <span className="text-8xl pt-4">💡</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          {/* <div className="md:w-1/2"></div> */}
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-2/3">
             <p className="text-xl ">You can get some ideas from here:</p>
             <ul>
               <li>
@@ -640,6 +666,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 0. Bonus */}
       <div className="flex flex-col items-center p-4">
         <h2 className="text-4xl">More resources!</h2>
 
