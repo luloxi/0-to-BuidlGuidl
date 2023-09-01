@@ -7,8 +7,8 @@ const Home: NextPage = () => {
   return (
     <>
       <MetaHeader />
-      <div className="flex flex-col items-center mt-6 p-4">
-        <h1 className="text-6xl">Mint this dynamic NFT!</h1>
+      <div className="flex flex-col items-center p-4">
+        <h1 className="text-5xl">Mint this dynamic NFT!</h1>
       </div>
     </>
   );

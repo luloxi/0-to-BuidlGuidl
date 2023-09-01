@@ -7,8 +7,8 @@ const Home: NextPage = () => {
     <>
       <MetaHeader />
 
-      <div className="flex flex-col items-center p-4 bg-primary">
-        <h1 className="text-6xl text-center">Learn the ETH tech stack!</h1>
+      <div className="flex flex-col items-center p-4">
+        <h1 className="text-5xl text-center ">Learn the ETH tech stack!</h1>
         <p className="text-xl max-w-lg">
           To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
           started:
@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl">🐣</span>
+            <span className="text-8xl py-4">🐣</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
@@ -67,8 +67,8 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center p-4 text-success bg-black">
-        <h2 className="text-3xl text-center">
+      <div className="flex flex-col items-center p-4 bg-slate-900 text-warning">
+        <h2 className="text-4xl text-center">
           Got the basics, <strong>now what?</strong>
         </h2>
         <div className="flex flex-row items-center gap-3">
@@ -258,24 +258,18 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=gyMwXuJrbJQ" className="underline">
-                  Learn React JS - Full Course for Beginners [2019]
+                <Link href="https://www.youtube.com/watch?v=MsnQ5uepIaE" className="underline">
+                  Frontend Web Development: In-Depth Project Tutorial (HTML, CSS, JavaScript, TypeScript, React)
                 </Link>{" "}
-                (5 hs course)
+                (10 hs course)
               </li>
+
               <li>
                 -{" "}
                 <Link href="https://www.youtube.com/watch?v=KjY94sAKLlw" className="underline">
                   Next.js React Framework Course – Build and Deploy a Full Stack App From scratch
                 </Link>{" "}
                 (5 hs course)
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://www.youtube.com/watch?v=FJDVKeh7RJI&t" className="underline">
-                  React & TypeScript - Course for Beginners
-                </Link>{" "}
-                (1:30 hs course)
               </li>
             </ul>
           </div>
@@ -321,61 +315,6 @@ const Home: NextPage = () => {
       </div>
 
       <div className="flex flex-col items-center p-4 bg-secondary">
-        <h2 className="text-4xl text-center">Make your frontend interact with smart contracts...</h2>
-
-        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
-          {/* This div will be on the left on larger screens */}
-          <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🦃</span>
-          </div>
-
-          {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
-            <p className="text-xl max-w-lg">Learn Scaffold-ETH 2 and Wagmi hooks:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline">
-                  Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://wagmi.sh/core/getting-started" className="underline">
-                  Wagmi - Getting started
-                </Link>{" "}
-              </li>
-            </ul>
-          </div>
-
-          {/* This div will be on the right on larger screens */}
-          <div className="md:w-1/3">
-            <p className="text-xl">More tools:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link href="https://docs.ethers.org/v6/" className="underline">
-                  Ethers - Documentation
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
-                  RainbowKit - Introduction
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
-                  Viem - Getting Started
-                </Link>{" "}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center p-4 bg-primary">
         <h2 className="text-4xl text-center">Learn frontend styling frameworks...</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
@@ -443,7 +382,134 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center p-6 bg-black text-indigo-300">
+      <div className="flex flex-col items-center p-4 ">
+        <h2 className="text-4xl text-center">Make your frontend interact with smart contracts...</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🦃</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <p className="text-xl max-w-lg">Learn Scaffold-ETH 2 and Wagmi hooks:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline">
+                  Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://wagmi.sh/core/getting-started" className="underline">
+                  Wagmi - Getting started
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            <p className="text-xl">More tools:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://docs.ethers.org/v6/" className="underline">
+                  Ethers - Documentation
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
+                  RainbowKit - Introduction
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
+                  Viem - Getting Started
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center p-6 bg-primary">
+        <h2 className="text-4xl text-center">Get started creating dApps!</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🏗️</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <p className="text-xl">See Scaffold-ETH 2 in action:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/watch?v=_1qqjozKPWQ" className="underline">
+                  Live building an app on Ethereum
+                </Link>{" "}
+                (1 hour video)
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/watch?v=ahDEbcdVV-o" className="underline">
+                  npx create-eth session building a live app on Ethereum
+                </Link>{" "}
+                (45 min video)
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/watch?v=Gspa3YL6Rqk" className="underline">
+                  Introduction to Full Stack dApp Development (with The Graph)
+                </Link>{" "}
+                (1:30 hs video)
+              </li>
+            </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            {" "}
+            <p className="text-xl max-w-lg">More resources:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link
+                  href="https://mirror.xyz/news.buidlguidl.eth/8Lx4pV-h2yk6mu5C5UZVPjfOtVwknLmB8bd7114kaxI"
+                  className="underline"
+                >
+                  Solidity Tinkering w/Scaffold-ETH
+                </Link>{" "}
+              </li>
+
+              <li>
+                -{" "}
+                <Link href="https://youtu.be/vZpv9qHMSRY?si=tNeQoUGiTowuYH8Q" className="underline">
+                  Scaffold-ETH-2: building decentralized applications
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link
+                  href="https://www.youtube.com/playlist?list=PLJz1HruEnenD77QAsqnk7KG8rSOMk0B99"
+                  className="underline"
+                >
+                  BuidlGuidl Labs
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center p-6 bg-slate-950 text-success">
         <h2 className="text-4xl text-center">Let’s get you that 0.5 ETH stream now!</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6" min-w-full>
@@ -534,80 +600,8 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      <div className="flex flex-col items-center p-6 bg-secondary">
-        <h2 className="text-4xl text-center">Get started creating dApps!</h2>
-
-        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
-          {/* This div will be on the left on larger screens */}
-          <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🏗️</span>
-          </div>
-
-          {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
-            <p className="text-xl">See Scaffold-ETH 2 in action:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link href="https://www.youtube.com/watch?v=_1qqjozKPWQ" className="underline">
-                  Live building an app on Ethereum
-                </Link>{" "}
-                (1 hour video)
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://www.youtube.com/watch?v=ahDEbcdVV-o" className="underline">
-                  npx create-eth session building a live app on Ethereum
-                </Link>{" "}
-                (45 min video)
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://www.youtube.com/watch?v=Gspa3YL6Rqk" className="underline">
-                  Introduction to Full Stack dApp Development (with The Graph)
-                </Link>{" "}
-                (1:30 hs video)
-              </li>
-            </ul>
-          </div>
-
-          {/* This div will be on the right on larger screens */}
-          <div className="md:w-1/3">
-            {" "}
-            <p className="text-xl max-w-lg">More resources:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link
-                  href="https://mirror.xyz/news.buidlguidl.eth/8Lx4pV-h2yk6mu5C5UZVPjfOtVwknLmB8bd7114kaxI"
-                  className="underline"
-                >
-                  Solidity Tinkering w/Scaffold-ETH
-                </Link>{" "}
-              </li>
-
-              <li>
-                -{" "}
-                <Link href="https://youtu.be/vZpv9qHMSRY?si=tNeQoUGiTowuYH8Q" className="underline">
-                  Scaffold-ETH-2: building decentralized applications
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link
-                  href="https://www.youtube.com/playlist?list=PLJz1HruEnenD77QAsqnk7KG8rSOMk0B99"
-                  className="underline"
-                >
-                  BuidlGuidl Labs
-                </Link>{" "}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center p-4 bg-black text-warning">
-        <h2 className="text-3xl">Don&apos;t know what to build?</h2>
+      <div className="flex flex-col items-center p-4 bg-slate-900 text-warning">
+        <h2 className="text-4xl">Don&apos;t know what to build?</h2>
         <div className="flex flex-row items-center gap-3 ">
           <span className="text-8xl">💡</span>
           <div className="max-w-lg">
