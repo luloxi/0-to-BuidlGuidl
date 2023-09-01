@@ -14,7 +14,7 @@ type MetaHeaderProps = {
 const baseUrl = process.env.NEXT_PUBLIC_VERCEL_URL ? `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/` : "/";
 
 export const MetaHeader = ({
-  title = "0 to BuidlGuidl | Scaffold-ETH 2 App",
+  title = "0 to BuidlGuidl",
   description = "Built with 🏗 Scaffold-ETH 2",
   image = "thumbnail.jpg",
   twitterCard = "summary_large_image",
