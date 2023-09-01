@@ -28,6 +28,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
+            <p className="text-xl max-w-lg">Basics about Ethereum, JavaScript and web3 dapp building:</p>
             <ul>
               <li>
                 <Link href="https://ethereum.foundation/ethereum" className="underline">
