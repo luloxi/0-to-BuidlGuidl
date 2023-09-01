@@ -158,7 +158,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-6">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🐔</span>
+            <span className="text-8xl pt-4">🐤</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
@@ -229,7 +229,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🦚</span>
+            <span className="text-8xl pt-4">🐔</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
@@ -297,7 +297,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🐤</span>
+            <span className="text-8xl pt-4">🦃</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
@@ -389,7 +389,7 @@ const Home: NextPage = () => {
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🦃</span>
+            <span className="text-8xl pt-4">🦚</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
