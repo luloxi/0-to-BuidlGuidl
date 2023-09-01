@@ -13,36 +13,19 @@ const Home: NextPage = () => {
           To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
           started:
         </p>
-        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+      </div>
+      <div className="flex flex-col items-center p-4 bg-primary">
+        <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
-          <div className="md:w-1/6 flex justify-center">
+          <div className="md:w-1/3 flex justify-center">
             <span className="text-8xl py-4">🐣</span>
           </div>
 
           {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
-            <ul>
-              <li>
-                <Link
-                  href="https://www.youtube.com/watch?v=zuJ-elbo88E&list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69"
-                  className="underline"
-                >
-                  Web2 to Web3 YouTube playlist
-                </Link>{" "}
-                (from theory to completing SpeedRunEthereum challenges and entering BuidlGuidl)
-              </li>
-
-              <li>
-                <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" className="underline">
-                  Scaffold-ETH - general developer chat
-                </Link>{" "}
-                (Telegram)
-              </li>
-            </ul>
-          </div>
+          {/* <div className="md:w-1/2"></div> */}
 
           {/* This div will be on the right on larger screens */}
-          <div className="md:w-1/3">
+          <div className="md:w-2/3">
             <ul>
               <li>
                 <Link href="https://ethereum.foundation/ethereum" className="underline">
@@ -83,10 +66,10 @@ const Home: NextPage = () => {
               , you need to:
             </p>
             <ul>
-              <li>- know how to read, edit and write smart contracts</li>
               <li>- create frontends that can react to smart contracts</li>
-              <li>- make frontends interact with smart contracts</li>
               <li>- make frontends look and work good</li>
+              <li>- know how to read, edit and write smart contracts</li>
+              <li>- make frontends interact with smart contracts</li>
               <li>- use all that knowledge in a single build! </li>
             </ul>
           </div>
@@ -162,80 +145,6 @@ const Home: NextPage = () => {
                 -{" "}
                 <Link href="https://bard.google.com/" className="underline">
                   Bard
-                </Link>{" "}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex flex-col items-center p-4 bg-primary">
-        <h2 className="text-4xl text-center">Learn Solidity (smart contracts)...</h2>
-
-        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
-          {/* This div will be on the left on larger screens */}
-          <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🐤</span>
-          </div>
-
-          {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
-            {" "}
-            <p className="text-xl max-w-lg">Take at least one of these courses:</p>
-            <ul>
-              <li>
-                - (Hardhat){" "}
-                <Link href="https://www.youtube.com/watch?v=gyMwXuJrbJQ" className="underline">
-                  Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript
-                </Link>{" "}
-                (32 hs course)
-              </li>
-              <li>
-                - (Foundry){" "}
-                <Link
-                  href="https://www.youtube.com/watch?v=umepbfKp5rI&list=PL4Rj_WH6yLgWe7TxankiqkrkVKXIwOP42"
-                  className="underline"
-                >
-                  Learn Solidity, Blockchain Development, & Smart Contracts | Powered By AI
-                </Link>{" "}
-                (32 hs course)
-              </li>
-            </ul>
-          </div>
-
-          {/* This div will be on the right on larger screens */}
-          <div className="md:w-1/3">
-            {" "}
-            <p className="text-xl max-w-lg">Other resources:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link href="https://learnweb3.io/" className="underline">
-                  LearnWeb3DAO
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://solidity-by-example.org/" className="underline">
-                  Solidity by Example
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://www.youtube.com/@smartcontractprogrammer" className="underline">
-                  Smart Contract Programmer (YouTube channel)
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://university.alchemy.com/home" className="underline">
-                  Alchemy University
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://github.com/x676f64/secureum-mind_map" className="underline">
-                  Secureum Mind Map
                 </Link>{" "}
               </li>
             </ul>
@@ -326,7 +235,7 @@ const Home: NextPage = () => {
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2">
             {" "}
-            <p className="text-xl">Learn some TailwindCSS and daisyUI:</p>
+            <p className="text-xl">Learn TailwindCSS and daisyUI:</p>
             <ul>
               <li>
                 -{" "}
@@ -375,6 +284,98 @@ const Home: NextPage = () => {
                 -{" "}
                 <Link href="https://chakra-templates.dev/" className="underline">
                   ChakraUI Templates
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-col items-center p-4 bg-primary">
+        <h2 className="text-4xl text-center">Learn Solidity (smart contracts)...</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🐤</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <p className="text-xl max-w-lg">BuidlGuidl learning material:</p>
+            <ul>
+              <li>
+                <Link
+                  href="https://www.youtube.com/watch?v=zuJ-elbo88E&list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69"
+                  className="underline"
+                >
+                  Web2 to Web3 YouTube playlist
+                </Link>{" "}
+                (learn web3 concepts and complete SpeedRunEthereum challenges)
+              </li>
+
+              <li>
+                <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" className="underline">
+                  Scaffold-ETH - general developer chat
+                </Link>{" "}
+                (Telegram)
+              </li>
+            </ul>
+            <p className="text-xl max-w-lg">Suggested courses:</p>
+            <ul>
+              <li>
+                - (Foundry){" "}
+                <Link
+                  href="https://www.youtube.com/watch?v=umepbfKp5rI&list=PL4Rj_WH6yLgWe7TxankiqkrkVKXIwOP42"
+                  className="underline"
+                >
+                  Learn Solidity, Blockchain Development, & Smart Contracts | Powered By AI
+                </Link>{" "}
+                (32 hs course)
+              </li>
+              <li>
+                - (Hardhat){" "}
+                <Link href="https://www.youtube.com/watch?v=gyMwXuJrbJQ" className="underline">
+                  Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript
+                </Link>{" "}
+                (32 hs course)
+              </li>
+            </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            {" "}
+            <p className="text-xl max-w-lg">Other resources:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://learnweb3.io/" className="underline">
+                  LearnWeb3DAO
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://solidity-by-example.org/" className="underline">
+                  Solidity by Example
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/@smartcontractprogrammer" className="underline">
+                  Smart Contract Programmer (YouTube channel)
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://university.alchemy.com/home" className="underline">
+                  Alchemy University
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://github.com/x676f64/secureum-mind_map" className="underline">
+                  Secureum Mind Map
                 </Link>{" "}
               </li>
             </ul>
