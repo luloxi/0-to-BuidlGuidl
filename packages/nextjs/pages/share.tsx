@@ -5,13 +5,6 @@ import copy from "clipboard-copy";
 // import Link from "next/link";
 import type { NextPage } from "next";
 import { CopyToClipboard } from "react-copy-to-clipboard";
-import {
-  Bars3Icon,
-  BoltIcon,
-  BookOpenIcon, // BugAntIcon,
-  HomeIcon,
-  ShareIcon, // SparklesIcon,
-} from "@heroicons/react/24/outline";
 // import { Copy } from "@heroicons/react/24/solid";
 import { MetaHeader } from "~~/components/MetaHeader";
 
