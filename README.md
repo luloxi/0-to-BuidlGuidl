@@ -64,3 +64,7 @@ Visit your app on: `http://localhost:3000`. You can interact with your smart con
 
 - Edit your frontend in `packages/nextjs/pages`
 - Read [SE2-DOCUMENTATION](./SE2-DOCUMENTATION.md) to learn how this repo works!
+
+## Development notes
+
+You can check current development notes [here](https://lulox.notion.site/0-to-BuidlGuidl-4126ce65cc8d45158d6c3e1b2eebe28f?pvs=4)
