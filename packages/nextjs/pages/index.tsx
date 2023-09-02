@@ -29,13 +29,13 @@ const Home: NextPage = () => {
               will get you started.
               <p />
               <strong className="text-yellow-500">Got web3 skills?</strong> Go to{" "}
-              <Link className="underline" href="https://speedrunethereum.com/">
+              <Link className="underline" href="https://speedrunethereum.com/" target="_blank">
                 SpeedRunEthereum
               </Link>{" "}
               and{" "}
               <strong>
                 complete the challenges to join{" "}
-                <Link className="underline" href="https://buidlguidl.com/">
+                <Link className="underline" href="https://buidlguidl.com/" target="_blank">
                   BuidlGuidl
                 </Link>
               </strong>
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
               <p />
               <strong className="text-green-500">After you join, build dApps</strong> for the Ethereum blockchain with{" "}
               <strong>
-                <Link className="underline" href="https://scaffoldeth.io/">
+                <Link className="underline" href="https://scaffoldeth.io/" target="_blank">
                   Scaffold-ETH 2
                 </Link>
                 , an open source toolkit
@@ -52,7 +52,7 @@ const Home: NextPage = () => {
             </p>
             <p className="text-center text-2xl">
               <strong>Share your builds</strong> with{" "}
-              <Link className="underline" href="https://buidlguidl.com/">
+              <Link className="underline" href="https://buidlguidl.com/" target="_blank">
                 BuidlGuidl
               </Link>{" "}
               and the world, <strong>and earn some ETH!</strong>
@@ -62,7 +62,7 @@ const Home: NextPage = () => {
               <Link className="underline" href="./learn">
                 <button className="btn btn-error">Free Learning Resources</button>
               </Link>
-              <Link className="underline" href="https://speedrunethereum.com/">
+              <Link className="underline" href="https://speedrunethereum.com/" target="_blank">
                 <button className="btn btn-warning">SpeedRunEthereum</button>
               </Link>
               <Link className="underline" href="./share">

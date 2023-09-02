@@ -31,19 +31,19 @@ const Home: NextPage = () => {
             <p className="text-xl max-w-lg">Basics about Ethereum, JavaScript and web3 dapp building:</p>
             <ul>
               <li>
-                <Link href="https://ethereum.foundation/ethereum" className="underline">
+                <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
                   What is Ethereum?
                 </Link>{" "}
                 (1 min read)
               </li>
               <li>
-                <Link href="https://ethereum.foundation/infinitegarden" className="underline">
+                <Link href="https://ethereum.foundation/infinitegarden" target="_blank" className="underline">
                   The Infinite Garden
                 </Link>{" "}
                 (1 min read)
               </li>
               <li>
-                <Link href="https://www.youtube.com/watch?v=PkZNo7MFNFg" className="underline">
+                <Link href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank" className="underline">
                   Learn JavaScript - Full Course for Beginners
                 </Link>{" "}
                 (3 hs video)
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
           <div className="md:w-2/3">
             <p className="text-xl max-w-lg">
               To create production ready dApps from scratch using{" "}
-              <Link className="underline" href="https://scaffoldeth.io/">
+              <Link className="underline" target="_blank" href="https://scaffoldeth.io/">
                 Scaffold-ETH 2
               </Link>
               , you need to:
@@ -103,13 +103,13 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://chat.openai.com/" className="underline">
+                <Link href="https://chat.openai.com/" target="_blank" className="underline">
                   ChatGPT
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.phind.com/" className="underline">
+                <Link href="https://www.phind.com/" target="_blank" className="underline">
                   Phind
                 </Link>{" "}
                 (AI search engine for developers)
@@ -117,7 +117,7 @@ const Home: NextPage = () => {
 
               <li>
                 -{" "}
-                <Link href="https://github.com/features/copilot" className="underline">
+                <Link href="https://github.com/features/copilot" target="_blank" className="underline">
                   GitHub Copilot
                 </Link>{" "}
                 (great for help with code within VS code, 10$/mo - unless you&apos;re a university student)
@@ -131,31 +131,31 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=jHv63Uvk5VA" className="underline">
+                <Link href="https://www.youtube.com/watch?v=jHv63Uvk5VA" target="_blank" className="underline">
                   Complete ChatGPT Tutorial - [Become A Power User in 30 Minutes]
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=iR99LO28nzM" className="underline">
+                <Link href="https://www.youtube.com/watch?v=iR99LO28nzM" target="_blank" className="underline">
                   Uploading Files to ChatGPT: A More Powerful Experience
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=RkK6CgOTLqA" className="underline">
+                <Link href="https://www.youtube.com/watch?v=RkK6CgOTLqA" target="_blank" className="underline">
                   5 Ways To Use ChatGPT To Build Your Website
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=GizsSo-EevA" className="underline">
+                <Link href="https://www.youtube.com/watch?v=GizsSo-EevA" target="_blank" className="underline">
                   Use ChatGPT to Code a Full Stack App – Full Course
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://bard.google.com/" className="underline">
+                <Link href="https://bard.google.com/" target="_blank" className="underline">
                   Bard
                 </Link>{" "}
               </li>
@@ -180,7 +180,7 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=MsnQ5uepIaE" className="underline">
+                <Link href="https://www.youtube.com/watch?v=MsnQ5uepIaE" target="_blank" className="underline">
                   Frontend Web Development: In-Depth Project Tutorial (HTML, CSS, JavaScript, TypeScript, React)
                 </Link>{" "}
                 (10 hs course)
@@ -188,7 +188,7 @@ const Home: NextPage = () => {
 
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=KjY94sAKLlw" className="underline">
+                <Link href="https://www.youtube.com/watch?v=KjY94sAKLlw" target="_blank" className="underline">
                   Next.js React Framework Course – Build and Deploy a Full Stack App From scratch
                 </Link>{" "}
                 (5 hs course)
@@ -202,32 +202,32 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://react.dev/" className="underline">
+                <Link href="https://react.dev/" target="_blank" className="underline">
                   Official React learning site
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=bMknfKXIFA8" className="underline">
+                <Link href="https://www.youtube.com/watch?v=bMknfKXIFA8" target="_blank" className="underline">
                   React Course - Beginner&apos;s Tutorial for React JavaScript Library [2022]
                 </Link>{" "}
                 (12 hs course)
               </li>
               <li>
                 -{" "}
-                <Link href="https://nextjs.org/learn/foundations/about-nextjs" className="underline">
+                <Link href="https://nextjs.org/learn/foundations/about-nextjs" target="_blank" className="underline">
                   Official Next.js learning site
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=gp5H0Vw39yw" className="underline">
+                <Link href="https://www.youtube.com/watch?v=gp5H0Vw39yw" target="_blank" className="underline">
                   Learn TypeScript - Full Course for Beginners
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=30LWjhZzg50" className="underline">
+                <Link href="https://www.youtube.com/watch?v=30LWjhZzg50" target="_blank" className="underline">
                   Learn TypeScript – Full Tutorial
                 </Link>{" "}
               </li>
@@ -253,20 +253,20 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=ft30zcMlFao" className="underline">
+                <Link href="https://www.youtube.com/watch?v=ft30zcMlFao" target="_blank" className="underline">
                   Learn Tailwind CSS – Course for Beginners
                 </Link>{" "}
                 (4 hs course)
               </li>
               <li>
                 -{" "}
-                <Link href="https://tailwindcss.com/" className="underline">
+                <Link href="https://tailwindcss.com/" target="_blank" className="underline">
                   TailwindCSS Official Docs
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://daisyui.com/" className="underline">
+                <Link href="https://daisyui.com/" target="_blank" className="underline">
                   daisyUI Official Docs (TailwindCSS components)
                 </Link>{" "}
               </li>
@@ -283,6 +283,7 @@ const Home: NextPage = () => {
                 <Link
                   href="https://www.youtube.com/playlist?list=PLx2Y9Sna27Xt3deeeOLqW59-mdWpUWQ0T"
                   className="underline"
+                  target="_blank"
                 >
                   ChakraUI for Beginners
                 </Link>{" "}
@@ -290,13 +291,13 @@ const Home: NextPage = () => {
               </li>
               <li>
                 -{" "}
-                <Link href="https://chakra-ui.com/getting-started" className="underline">
+                <Link href="https://chakra-ui.com/getting-started" className="underline" target="_blank">
                   ChakraUI Official Docs
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://chakra-templates.dev/" className="underline">
+                <Link href="https://chakra-templates.dev/" className="underline" target="_blank">
                   ChakraUI Templates
                 </Link>{" "}
               </li>
@@ -322,15 +323,16 @@ const Home: NextPage = () => {
               <li>
                 <Link
                   href="https://www.youtube.com/watch?v=zuJ-elbo88E&list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69"
-                  className="underline"
+                  className="underline font-bold"
+                  target="_blank"
                 >
                   Web2 to Web3 YouTube playlist
                 </Link>{" "}
-                (learn web3 concepts and complete SpeedRunEthereum challenges)
+                (learn web3 concepts and <strong>complete SpeedRunEthereum challenges</strong>)
               </li>
 
               <li>
-                <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" className="underline">
+                <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" target="_blank" className="underline">
                   Scaffold-ETH - general developer chat
                 </Link>{" "}
                 (Telegram)
@@ -343,6 +345,7 @@ const Home: NextPage = () => {
                 <Link
                   href="https://www.youtube.com/watch?v=umepbfKp5rI&list=PL4Rj_WH6yLgWe7TxankiqkrkVKXIwOP42"
                   className="underline"
+                  target="_blank"
                 >
                   Learn Solidity, Blockchain Development, & Smart Contracts | Powered By AI
                 </Link>{" "}
@@ -350,7 +353,7 @@ const Home: NextPage = () => {
               </li>
               <li>
                 - (Hardhat){" "}
-                <Link href="https://www.youtube.com/watch?v=gyMwXuJrbJQ" className="underline">
+                <Link href="https://www.youtube.com/watch?v=gyMwXuJrbJQ" className="underline" target="_blank">
                   Learn Blockchain, Solidity, and Full Stack Web3 Development with JavaScript
                 </Link>{" "}
                 (32 hs course)
@@ -365,31 +368,31 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://learnweb3.io/" className="underline">
+                <Link href="https://learnweb3.io/" className="underline" target="_blank">
                   LearnWeb3DAO
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://solidity-by-example.org/" className="underline">
+                <Link href="https://solidity-by-example.org/" className="underline" target="_blank">
                   Solidity by Example
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/@smartcontractprogrammer" className="underline">
+                <Link href="https://www.youtube.com/@smartcontractprogrammer" className="underline" target="_blank">
                   Smart Contract Programmer (YouTube channel)
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://university.alchemy.com/home" className="underline">
+                <Link href="https://university.alchemy.com/home" className="underline" target="_blank">
                   Alchemy University
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://github.com/x676f64/secureum-mind_map" className="underline">
+                <Link href="https://github.com/x676f64/secureum-mind_map" className="underline" target="_blank">
                   Secureum Mind Map
                 </Link>{" "}
               </li>
@@ -414,19 +417,19 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://scaffoldeth.io/" className="underline">
+                <Link href="https://scaffoldeth.io/" className="underline" target="_blank">
                   Scaffold-ETH 2 - Getting started
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline">
+                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline" target="_blank">
                   Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://wagmi.sh/core/getting-started" className="underline">
+                <Link href="https://wagmi.sh/core/getting-started" className="underline" target="_blank">
                   Wagmi - Getting started
                 </Link>{" "}
               </li>
@@ -439,19 +442,19 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://docs.ethers.org/v6/" className="underline">
+                <Link href="https://docs.ethers.org/v6/" className="underline" target="_blank">
                   Ethers - Documentation
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline" target="_blank">
                   RainbowKit - Introduction
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://viem.sh/docs/getting-started.html" className="underline">
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline" target="_blank">
                   Viem - Getting Started
                 </Link>{" "}
               </li>
@@ -476,21 +479,21 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=_1qqjozKPWQ" className="underline">
+                <Link href="https://www.youtube.com/watch?v=_1qqjozKPWQ" className="underline" target="_blank">
                   Live building an app on Ethereum
                 </Link>{" "}
                 (1 hour video)
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=ahDEbcdVV-o" className="underline">
+                <Link href="https://www.youtube.com/watch?v=ahDEbcdVV-o" className="underline" target="_blank">
                   npx create-eth session building a live app on Ethereum
                 </Link>{" "}
                 (45 min video)
               </li>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=Gspa3YL6Rqk" className="underline">
+                <Link href="https://www.youtube.com/watch?v=Gspa3YL6Rqk" className="underline" target="_blank">
                   Introduction to Full Stack dApp Development (with The Graph)
                 </Link>{" "}
                 (1:30 hs video)
@@ -508,6 +511,7 @@ const Home: NextPage = () => {
                 <Link
                   href="https://mirror.xyz/news.buidlguidl.eth/8Lx4pV-h2yk6mu5C5UZVPjfOtVwknLmB8bd7114kaxI"
                   className="underline"
+                  target="_blank"
                 >
                   Solidity Tinkering w/Scaffold-ETH
                 </Link>{" "}
@@ -515,7 +519,7 @@ const Home: NextPage = () => {
 
               <li>
                 -{" "}
-                <Link href="https://youtu.be/vZpv9qHMSRY?si=tNeQoUGiTowuYH8Q" className="underline">
+                <Link href="https://youtu.be/vZpv9qHMSRY?si=tNeQoUGiTowuYH8Q" className="underline" target="_blank">
                   Scaffold-ETH-2: building decentralized applications
                 </Link>{" "}
               </li>
@@ -524,6 +528,7 @@ const Home: NextPage = () => {
                 <Link
                   href="https://www.youtube.com/playlist?list=PLJz1HruEnenD77QAsqnk7KG8rSOMk0B99"
                   className="underline"
+                  target="_blank"
                 >
                   BuidlGuidl Labs
                 </Link>{" "}
@@ -580,24 +585,25 @@ const Home: NextPage = () => {
                 <Link
                   href="https://www.youtube.com/watch?v=RGOj5yH7evk&list=PLLJ1hZKyeCH1I8dP0UNTpWoIhsl6KpVbu&index=3"
                   className="underline"
+                  target="_blank"
                 >
                   Git and GitHub for Beginners - Crash Course
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://skills.github.com/" className="underline">
+                <Link href="https://skills.github.com/" className="underline" target="_blank">
                   GitHub Skills
                 </Link>{" "}
                 - Interactive courses designed by GitHub
               </li>
               <li>
                 -{" "}
-                <Link href="https://desktop.github.com/" className="underline">
+                <Link href="https://desktop.github.com/" className="underline" target="_blank">
                   GitHub Desktop
                 </Link>{" "}
                 (
-                <Link href="https://github.com/muroko/github-desktop-linux" className="underline">
+                <Link href="https://github.com/muroko/github-desktop-linux" className="underline" target="_blank">
                   Linux version
                 </Link>
                 )
@@ -610,13 +616,14 @@ const Home: NextPage = () => {
                 <Link
                   className="underline"
                   href="https://mirror.xyz/news.buidlguidl.eth/O_Gc84QO4TjvxJnunkRr-s-It1qBTK7TMlJcWf4FQ_I"
+                  target="_blank"
                 >
                   BuidlGuidl FAQ
                 </Link>
               </li>
               <li>
                 -{" "}
-                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk">
+                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk" target="_blank">
                   BG Labs - BG Streams, Onboarding, and Psychology
                 </Link>
               </li>
@@ -643,19 +650,19 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk">
+                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk" target="_blank">
                   ETH Tech tree
                 </Link>
               </li>
               <li>
                 -{" "}
-                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk">
+                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk" target="_blank">
                   ETH.BUILD - Educational Sandbox for Web3
                 </Link>
               </li>
               <li>
                 -{" "}
-                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk">
+                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk" target="_blank">
                   ETH.BUILD - YouTube Channel
                 </Link>
               </li>
@@ -664,6 +671,7 @@ const Home: NextPage = () => {
                 <Link
                   className="underline"
                   href="https://twitter.com/austingriffith/status/1478760479275175940?s=20&t=0zGF8M_7Hoeuy-D6LDoFpA"
+                  target="_blank"
                 >
                   Austin Griffith&apos;s thread on what to do after crushing SpeedRunEthereum
                 </Link>
@@ -689,7 +697,7 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://thenetworkstate.com/" className="underline">
+                <Link href="https://thenetworkstate.com/" className="underline" target="_blank">
                   The Network State
                 </Link>{" "}
                 (book on online culture, community, politics, economy, etc…)
@@ -702,6 +710,7 @@ const Home: NextPage = () => {
                 <Link
                   href="https://lulox.notion.site/Solidity-b6d7f7c5c5ec4c1fbbc01843f4055c72?pvs=4"
                   className="underline"
+                  target="_blank"
                 >
                   List of courses and guides
                 </Link>{" "}
@@ -712,6 +721,7 @@ const Home: NextPage = () => {
                 <Link
                   href="https://lulox.notion.site/Auditoor-18ca4918604c41589e799a49a831e027?pvs=4"
                   className="underline"
+                  target="_blank"
                 >
                   Resources on smart contracts security
                 </Link>{" "}
@@ -725,7 +735,7 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://www.freecodecamp.org/learn" className="underline">
+                <Link href="https://www.freecodecamp.org/learn" className="underline" target="_blank">
                   freeCodeCamp
                 </Link>{" "}
                 - Reccomended JavaScript Algorithms and Data Structures, and Front End Development Libraries
@@ -735,20 +745,20 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=ed8SzALpx1Q" className="underline">
+                <Link href="https://www.youtube.com/watch?v=ed8SzALpx1Q" className="underline" target="_blank">
                   GraphQL Full Course - Novice to Expert
                 </Link>{" "}
               </li>
 
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=fqMOX6JJhGo" className="underline">
+                <Link href="https://www.youtube.com/watch?v=fqMOX6JJhGo" className="underline" target="_blank">
                   Docker Tutorial for Beginners - A Full DevOps Course on How to Run Applications in Containers
                 </Link>{" "}
               </li>
               <li>
                 -{" "}
-                <Link href="https://learnweb3.io/lessons/docker-essentials/" className="underline">
+                <Link href="https://learnweb3.io/lessons/docker-essentials/" className="underline" target="_blank">
                   Docker Essentials - LearnWeb3
                 </Link>{" "}
               </li>
