@@ -24,7 +24,9 @@ const Home: NextPage = () => {
       <MetaHeader />
       <div className="flex flex-col items-center p-4">
         <h1 className="text-5xl">Mint this dynamic NFT!</h1>
+        <p className="text-xl max-w-lg">UNDER CONSTRUCTION, will deploy soon!</p>
       </div>
+
       {/* <div className="flex gap-3 justify-center">
         Your NFT has a tokenURI? {tokenURI ? <>{tokenURI}</> : <>"You don't have an NFT"</>}
       </div> */}
