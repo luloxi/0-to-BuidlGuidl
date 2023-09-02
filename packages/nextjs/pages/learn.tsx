@@ -414,6 +414,12 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
+                <Link href="https://scaffoldeth.io/" className="underline">
+                  Scaffold-ETH 2 - Getting started
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
                 <Link href="https://docs.scaffoldeth.io/hooks/" className="underline">
                   Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
                 </Link>{" "}

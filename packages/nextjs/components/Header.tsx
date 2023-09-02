@@ -5,7 +5,8 @@ import { useRouter } from "next/router";
 import {
   Bars3Icon,
   BoltIcon,
-  BookOpenIcon, // BugAntIcon,
+  BookOpenIcon,
+  BugAntIcon,
   HomeIcon,
   ShareIcon, // SparklesIcon,
 } from "@heroicons/react/24/outline";
@@ -68,12 +69,12 @@ export const Header = () => {
         </NavLink>
       </li>
 
-      {/* <li>
+      <li>
         <NavLink href="/debug">
           <BugAntIcon className="h-4 w-4" />
           Debug Contracts
         </NavLink>
-      </li> */}
+      </li>
     </>
   );
 

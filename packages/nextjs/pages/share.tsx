@@ -24,7 +24,8 @@ const Home: NextPage = () => {
     <>
       <MetaHeader />
       <div className="flex flex-col items-center p-4">
-        <h1 className="text-5xl mb-4 text-center">Share this page!</h1>
+        <h1 className="text-5xl text-center">Share this page!</h1>
+        <p className="text-xl max-w-lg">Get a friend started into ETH dApps development!</p>
         <Image
           alt="QR code pointing to 0-to-buidlguidl.vercel.app"
           src="/qr.png"
