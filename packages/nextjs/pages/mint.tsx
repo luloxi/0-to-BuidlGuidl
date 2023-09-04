@@ -5,7 +5,7 @@ import type { NextPage } from "next";
 import { useAccount } from "wagmi";
 import NFTContainer from "~~/components/0-to-BuidlGuidl/NFTContainer";
 import { MetaHeader } from "~~/components/MetaHeader";
-import { EtherInput } from "~~/components/scaffold-eth";
+import { Balance, EtherInput } from "~~/components/scaffold-eth";
 import { useScaffoldContractWrite } from "~~/hooks/scaffold-eth";
 
 const Home: NextPage = () => {
@@ -17,6 +17,11 @@ const Home: NextPage = () => {
     contractName: "ZeroToBuidlGuidlNFT",
     functionName: "mintNft",
     value: `${parseFloat(mintValue)}`,
+  });
+
+  const { writeAsync: withdrawFunds } = useScaffoldContractWrite({
+    contractName: "ZeroToBuidlGuidlNFT",
+    functionName: "withdrawFunds",
   });
 
   return (
@@ -56,6 +61,19 @@ const Home: NextPage = () => {
       </div>
 
       <NFTContainer connectedAddress={connectedAddress} />
+      <div className="flex justify-center items-center gap-3">
+        <p>
+          This button sends all funds in the contract to its rightful receivers! <br />
+          Wanna pay for the gas? Be our guest! 😜
+          <br />
+          <div className="flex items-center">
+            Contract actually holds <Balance address={connectedAddress} />
+          </div>
+        </p>
+        <button className="btn btn-error" onClick={() => withdrawFunds()}>
+          Withdraw funds
+        </button>
+      </div>
     </>
   );
 };

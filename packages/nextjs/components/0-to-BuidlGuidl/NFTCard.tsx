@@ -95,11 +95,11 @@ const NFTCard: React.FC<NFTCardProps> = ({ data, tokenId, owner, connectedAddres
               {data.name} #{tokenId}
             </p>
             <div className="flex flex-wrap space-x-2 mt-1">
-              {data.attributes.map((attribute: Attribute, index: number) => (
+              {/* {data.attributes.map((attribute: Attribute, index: number) => (
                 <span key={index} className="badge py-3">
                   <span className="font-bold">{attribute.trait_type}</span>: {attribute.value}
                 </span>
-              ))}
+              ))} */}
             </div>
           </div>
           <div className="flex flex-col justify-center">
@@ -130,16 +130,16 @@ const NFTCard: React.FC<NFTCardProps> = ({ data, tokenId, owner, connectedAddres
 
           <div className="card-actions mb-2 justify-around">
             <button
-              className="btn btn-warning btn-md px-8 m-2 tracking-wide"
-              onClick={() => handleSwitchTheme(tokenId)}
-            >
-              Switch Theme
-            </button>
-            <button
               className="btn btn-primary btn-md px-8 m-2 tracking-wide"
               onClick={() => handleTransfer(transferAddresses[tokenId], tokenId)}
             >
               Send
+            </button>
+            <button
+              className="btn btn-warning btn-md px-8 m-2 tracking-wide"
+              onClick={() => handleSwitchTheme(tokenId)}
+            >
+              Switch Theme
             </button>
           </div>
         </>
