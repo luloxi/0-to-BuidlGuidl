@@ -1,6 +1,6 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-import fs from "fs";
+// import fs from "fs";
 
 /**
  * Deploys a contract named "YourContract" using the deployer account and
@@ -22,13 +22,13 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  const sadSvg = fs.readFileSync("./images/sad.svg", { encoding: "utf8" });
-  const happySvg = fs.readFileSync("./images/happy.svg", { encoding: "utf8" });
+  // const sadSvg = fs.readFileSync("./images/sad.svg", { encoding: "utf8" });
+  // const happySvg = fs.readFileSync("./images/happy.svg", { encoding: "utf8" });
 
   await deploy("MoodNft", {
     from: deployer,
     // Contract constructor arguments
-    args: [sadSvg, happySvg],
+    // args: [sadSvg, happySvg],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.

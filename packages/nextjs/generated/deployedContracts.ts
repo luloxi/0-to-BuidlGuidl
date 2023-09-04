@@ -5,7 +5,7 @@ const contracts = {
       name: "localhost",
       contracts: {
         MoodNft: {
-          address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+          address: "0xE6E340D132b5f46d1e472DebcD681B2aBc16e57E",
           abi: [
             {
               inputs: [
@@ -190,19 +190,6 @@ const contracts = {
                   type: "uint256",
                 },
               ],
-              name: "flipMood",
-              outputs: [],
-              stateMutability: "nonpayable",
-              type: "function",
-            },
-            {
-              inputs: [
-                {
-                  internalType: "uint256",
-                  name: "tokenId",
-                  type: "uint256",
-                },
-              ],
               name: "getApproved",
               outputs: [
                 {
@@ -281,7 +268,7 @@ const contracts = {
               inputs: [],
               name: "mintNft",
               outputs: [],
-              stateMutability: "nonpayable",
+              stateMutability: "payable",
               type: "function",
             },
             {
@@ -503,7 +490,7 @@ const contracts = {
               inputs: [
                 {
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
               ],

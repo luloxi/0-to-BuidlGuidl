@@ -23,15 +23,15 @@ const NFTCard: React.FC<NFTCardProps> = ({ data, tokenId, owner, connectedAddres
   const [activeTab, setActiveTab] = useState("artwork");
   // Handle flipping mood
 
-  const { writeAsync: flipMood } = useScaffoldContractWrite({
-    contractName: "MoodNft",
-    functionName: "flipMood",
-    args: [BigInt(0)],
-  });
+  // const { writeAsync: flipMood } = useScaffoldContractWrite({
+  //   contractName: "MoodNft",
+  //   functionName: "flipMood",
+  //   args: [BigInt(0)],
+  // });
 
-  const handleFlipMood = async (tokenId: number) => {
-    await flipMood({ args: [BigInt(tokenId)] });
-  };
+  // const handleFlipMood = async (tokenId: number) => {
+  //   await flipMood({ args: [BigInt(tokenId)] });
+  // };
 
   // Transfer NFT
 
@@ -77,11 +77,11 @@ const NFTCard: React.FC<NFTCardProps> = ({ data, tokenId, owner, connectedAddres
 
       {activeTab === "artwork" && (
         // Render Artwork content here
-        <figure className="relative">
-          <Image src={data.image} alt="NFT Image" className="h-48 min-w-full" width={100} height={100} />
-          <figcaption className="glass absolute bottom-4 left-4 p-4 w-25 rounded-xl">
+        <figure className="relative py-4">
+          <Image src={data.image} alt="NFT Image" className="h-64 min-w-full" width={150} height={150} />
+          {/* <figcaption className="glass absolute bottom-4 left-4 p-4 w-25 rounded-xl">
             <span># {tokenId}</span>
-          </figcaption>
+          </figcaption> */}
         </figure>
       )}
 
@@ -94,11 +94,11 @@ const NFTCard: React.FC<NFTCardProps> = ({ data, tokenId, owner, connectedAddres
               {data.name} #{tokenId}
             </p>
             <div className="flex flex-wrap space-x-2 mt-1">
-              {data.attributes.map((attribute: Attribute, index: number) => (
+              {/* {data.attributes.map((attribute: Attribute, index: number) => (
                 <span key={index} className="badge py-3">
                   <span className="font-bold">{attribute.trait_type}</span>: {attribute.value}
                 </span>
-              ))}
+              ))} */}
             </div>
           </div>
           <div className="flex flex-col justify-center">
@@ -130,9 +130,9 @@ const NFTCard: React.FC<NFTCardProps> = ({ data, tokenId, owner, connectedAddres
           </div>
 
           <div className="card-actions mb-2 justify-around">
-            <button className="btn btn-warning btn-md px-8 m-2 tracking-wide" onClick={() => handleFlipMood(tokenId)}>
+            {/* <button className="btn btn-warning btn-md px-8 m-2 tracking-wide" onClick={() => handleFlipMood(tokenId)}>
               Flip Mood
-            </button>
+            </button> */}
             <button
               className="btn btn-primary btn-md px-8 m-2 tracking-wide"
               onClick={() => handleTransfer(transferAddresses[tokenId], tokenId)}
