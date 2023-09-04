@@ -11,75 +11,75 @@ interface NFTContainerProps {
 
 const NFTContainer: React.FC<NFTContainerProps> = ({ connectedAddress }) => {
   const [showAllNFTs, setShowAllNFTs] = useState<boolean>(false);
-  const [parsedMoodNftInfoData, setParsedMoodNftInfoData] = useState<any[] | null>(null);
+  const [parsedNFTInfoData, setParsedNFTInfoData] = useState<any[] | null>(null);
   const [displayCount, setDisplayCount] = useState<number>(12);
   const [ownerData, setOwnerData] = useState<string[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   // const [selectedPage, setSelectedPage] = useState<number>(currentPage);
 
   const itemsPerPage = displayCount;
-  const totalPages = Math.ceil((parsedMoodNftInfoData?.length ?? 0) / itemsPerPage);
+  const totalPages = Math.ceil((parsedNFTInfoData?.length ?? 0) / itemsPerPage);
 
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = currentPage * itemsPerPage;
 
-  const { data: contractData } = useDeployedContractInfo("MoodNft");
+  const { data: contractData } = useDeployedContractInfo("ZeroToBuidlGuidlNFT");
 
-  const MoodNftContract = {
+  const NFTContract = {
     address: contractData?.address,
     abi: contractData?.abi,
   };
 
-  const MoodNftInfoRead = [];
-  const MoodNftOwnerRead = [];
+  const NFTInfoRead = [];
+  const NFTOwnerRead = [];
 
-  const filteredMoodNftInfoData = parsedMoodNftInfoData?.filter(data => showAllNFTs || data.owner === connectedAddress);
+  const filteredNFTInfoData = parsedNFTInfoData?.filter(data => showAllNFTs || data.owner === connectedAddress);
 
-  const displayedMoodNftInfoData = filteredMoodNftInfoData?.slice(startIndex, endIndex);
+  const displayedNFTInfoData = filteredNFTInfoData?.slice(startIndex, endIndex);
 
   const { data: totalSupply } = useScaffoldContractRead({
-    contractName: "MoodNft",
-    functionName: "totalSupply",
+    contractName: "ZeroToBuidlGuidlNFT",
+    functionName: "getTokenCounter",
   });
 
   if (totalSupply) {
     for (let tokenId = 0; tokenId < totalSupply; tokenId++) {
-      MoodNftInfoRead.push({
-        ...MoodNftContract,
+      NFTInfoRead.push({
+        ...NFTContract,
         args: [tokenId],
         functionName: "tokenURI",
       });
-      MoodNftOwnerRead.push({
-        ...MoodNftContract,
+      NFTOwnerRead.push({
+        ...NFTContract,
         args: [tokenId],
         functionName: "ownerOf",
       });
     }
   }
 
-  const { data: MoodNftInfoData } = useContractReads({
-    contracts: MoodNftInfoRead,
+  const { data: NFTInfoData } = useContractReads({
+    contracts: NFTInfoRead,
     watch: true,
   });
 
-  const { data: MoodNftOwnerData } = useContractReads({
-    contracts: MoodNftOwnerRead,
+  const { data: NFTOwnerData } = useContractReads({
+    contracts: NFTOwnerRead,
     watch: true,
   });
 
   useEffect(() => {
-    if (MoodNftOwnerData) {
-      const updatedOwnerData = MoodNftOwnerData.map(contractData => {
+    if (NFTOwnerData) {
+      const updatedOwnerData = NFTOwnerData.map(contractData => {
         return contractData.result as string; // Get owner data
       });
 
       setOwnerData(updatedOwnerData);
     }
-  }, [MoodNftOwnerData]);
+  }, [NFTOwnerData]);
 
   useEffect(() => {
-    if (MoodNftInfoData) {
-      const updatedData = MoodNftInfoData.map((contractData, index) => {
+    if (NFTInfoData) {
+      const updatedData = NFTInfoData.map((contractData, index) => {
         const base64Data = (contractData.result as string).split(",")[1]; // Extract base64 part
         const decodedData = Buffer.from(base64Data, "base64").toString(); // Decode base64 to string
         return {
@@ -89,9 +89,9 @@ const NFTContainer: React.FC<NFTContainerProps> = ({ connectedAddress }) => {
         };
       });
 
-      setParsedMoodNftInfoData(updatedData);
+      setParsedNFTInfoData(updatedData);
     }
-  }, [MoodNftInfoData, ownerData]);
+  }, [NFTInfoData, ownerData]);
 
   const handleDisplayCountChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
     setDisplayCount(parseInt(event.target.value, 10));
@@ -117,20 +117,7 @@ const NFTContainer: React.FC<NFTContainerProps> = ({ connectedAddress }) => {
 
   return (
     <div className="flex flex-col gap-4 my-8 px-5 justify-center">
-      <div>
-        <label htmlFor="displayCount">Max NFTs to display: </label>
-        <select
-          id="displayCount"
-          className="px-2 py-1 border rounded bg-slate-600 text-white"
-          value={displayCount}
-          onChange={handleDisplayCountChange}
-        >
-          <option value={12}>12</option>
-          <option value={24}>24</option>
-          <option value={36}>36</option>
-          <option value={48}>48</option>
-          <option value={60}>60</option>
-        </select>{" "}
+      <div className="flex justify-center">
         <div>
           {/* Toggle button */}
           <label htmlFor="showOnlyYourNFTs">Show only your NFTs: </label>
@@ -143,8 +130,8 @@ const NFTContainer: React.FC<NFTContainerProps> = ({ connectedAddress }) => {
         </div>
       </div>
       <div className="flex flex-wrap gap-4 justify-center">
-        {MoodNftOwnerData &&
-          displayedMoodNftInfoData?.map((data, index) => (
+        {NFTOwnerData &&
+          displayedNFTInfoData?.map((data, index) => (
             <NFTCard
               key={index} // Use the tokenId from the fetched data
               data={data}
@@ -157,6 +144,21 @@ const NFTContainer: React.FC<NFTContainerProps> = ({ connectedAddress }) => {
 
       <div className="flex justify-center mt-4">
         <Pagination currentPage={currentPage} totalPages={totalPages} onPageChange={handlePageChange} />
+      </div>
+      <div className="flex justify-center gap-3">
+        <label htmlFor="displayCount">NFTs per page: </label>
+        <select
+          id="displayCount"
+          className="px-2 py-1 border rounded bg-slate-600 text-white"
+          value={displayCount}
+          onChange={handleDisplayCountChange}
+        >
+          <option value={12}>12</option>
+          <option value={24}>24</option>
+          <option value={36}>36</option>
+          <option value={48}>48</option>
+          <option value={60}>60</option>
+        </select>{" "}
       </div>
     </div>
   );

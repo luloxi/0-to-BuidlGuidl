@@ -4,20 +4,20 @@ const contracts = {
       chainId: "31337",
       name: "localhost",
       contracts: {
-        MoodNft: {
-          address: "0xE6E340D132b5f46d1e472DebcD681B2aBc16e57E",
+        ZeroToBuidlGuidlNFT: {
+          address: "0x9A676e781A523b5d0C0e43731313A708CB607508",
           abi: [
             {
               inputs: [
                 {
-                  internalType: "string",
-                  name: "sadSvgUri",
-                  type: "string",
+                  internalType: "address",
+                  name: "_curatorAddress",
+                  type: "address",
                 },
                 {
-                  internalType: "string",
-                  name: "happySvgUri",
-                  type: "string",
+                  internalType: "address",
+                  name: "_buidlguidlAddress",
+                  type: "address",
                 },
               ],
               stateMutability: "nonpayable",
@@ -25,17 +25,27 @@ const contracts = {
             },
             {
               inputs: [],
-              name: "ERC721Metadata__URI_QueryFor_NonExistentToken",
+              name: "ZeroToBuidlGuidlNFT__CantSwitchThemeIfNotOwner",
               type: "error",
             },
             {
               inputs: [],
-              name: "MoodNft__CantFlipMoodIfNotOwner",
+              name: "ZeroToBuidlGuidlNFT__CantTransferIfNotOwner",
               type: "error",
             },
             {
               inputs: [],
-              name: "MoodNft__CantTransferIfNotOwner",
+              name: "ZeroToBuidlGuidlNFT__KeepIt_YouNeedItMore",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "ZeroToBuidlGuidlNFT__NoBalanceToWithdraw",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "ZeroToBuidlGuidlNFT__WithdrawFailed",
               type: "error",
             },
             {
@@ -107,25 +117,6 @@ const contracts = {
                 {
                   indexed: true,
                   internalType: "address",
-                  name: "previousOwner",
-                  type: "address",
-                },
-                {
-                  indexed: true,
-                  internalType: "address",
-                  name: "newOwner",
-                  type: "address",
-                },
-              ],
-              name: "OwnershipTransferred",
-              type: "event",
-            },
-            {
-              anonymous: false,
-              inputs: [
-                {
-                  indexed: true,
-                  internalType: "address",
                   name: "from",
                   type: "address",
                 },
@@ -144,6 +135,10 @@ const contracts = {
               ],
               name: "Transfer",
               type: "event",
+            },
+            {
+              stateMutability: "payable",
+              type: "fallback",
             },
             {
               inputs: [
@@ -183,6 +178,32 @@ const contracts = {
               type: "function",
             },
             {
+              inputs: [],
+              name: "buidlguidlAddress",
+              outputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [],
+              name: "curatorAddress",
+              outputs: [
+                {
+                  internalType: "address",
+                  name: "",
+                  type: "address",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
               inputs: [
                 {
                   internalType: "uint256",
@@ -196,32 +217,6 @@ const contracts = {
                   internalType: "address",
                   name: "",
                   type: "address",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-            {
-              inputs: [],
-              name: "getHappySVG",
-              outputs: [
-                {
-                  internalType: "string",
-                  name: "",
-                  type: "string",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-            {
-              inputs: [],
-              name: "getSadSVG",
-              outputs: [
-                {
-                  internalType: "string",
-                  name: "",
-                  type: "string",
                 },
               ],
               stateMutability: "view",
@@ -285,19 +280,6 @@ const contracts = {
               type: "function",
             },
             {
-              inputs: [],
-              name: "owner",
-              outputs: [
-                {
-                  internalType: "address",
-                  name: "",
-                  type: "address",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-            {
               inputs: [
                 {
                   internalType: "uint256",
@@ -314,13 +296,6 @@ const contracts = {
                 },
               ],
               stateMutability: "view",
-              type: "function",
-            },
-            {
-              inputs: [],
-              name: "renounceOwnership",
-              outputs: [],
-              stateMutability: "nonpayable",
               type: "function",
             },
             {
@@ -414,20 +389,14 @@ const contracts = {
             {
               inputs: [
                 {
-                  internalType: "string",
-                  name: "svg",
-                  type: "string",
+                  internalType: "uint256",
+                  name: "tokenId",
+                  type: "uint256",
                 },
               ],
-              name: "svgToImageURI",
-              outputs: [
-                {
-                  internalType: "string",
-                  name: "",
-                  type: "string",
-                },
-              ],
-              stateMutability: "pure",
+              name: "switchTheme",
+              outputs: [],
+              stateMutability: "nonpayable",
               type: "function",
             },
             {
@@ -447,49 +416,6 @@ const contracts = {
               inputs: [
                 {
                   internalType: "uint256",
-                  name: "index",
-                  type: "uint256",
-                },
-              ],
-              name: "tokenByIndex",
-              outputs: [
-                {
-                  internalType: "uint256",
-                  name: "",
-                  type: "uint256",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-            {
-              inputs: [
-                {
-                  internalType: "address",
-                  name: "owner",
-                  type: "address",
-                },
-                {
-                  internalType: "uint256",
-                  name: "index",
-                  type: "uint256",
-                },
-              ],
-              name: "tokenOfOwnerByIndex",
-              outputs: [
-                {
-                  internalType: "uint256",
-                  name: "",
-                  type: "uint256",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-            {
-              inputs: [
-                {
-                  internalType: "uint256",
                   name: "id",
                   type: "uint256",
                 },
@@ -500,19 +426,6 @@ const contracts = {
                   internalType: "string",
                   name: "",
                   type: "string",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-            {
-              inputs: [],
-              name: "totalSupply",
-              outputs: [
-                {
-                  internalType: "uint256",
-                  name: "",
-                  type: "uint256",
                 },
               ],
               stateMutability: "view",
@@ -560,17 +473,15 @@ const contracts = {
               type: "function",
             },
             {
-              inputs: [
-                {
-                  internalType: "address",
-                  name: "newOwner",
-                  type: "address",
-                },
-              ],
-              name: "transferOwnership",
+              inputs: [],
+              name: "withdrawFunds",
               outputs: [],
               stateMutability: "nonpayable",
               type: "function",
+            },
+            {
+              stateMutability: "payable",
+              type: "receive",
             },
           ],
         },

@@ -4,11 +4,12 @@
 
 Onboarding dApp with:
 
+- Roadmap to join [BuidlGuidl](https://buidlguidl.com/)
+- Roadmap to get started building with [Scaffold-ETH 2](https://scaffoldeth.io/)
 - QR share for live events
-- Roadmap to join [BuidlGuidl](https://buidlguidl.com/) and get started building with [Scaffold-ETH 2](https://scaffoldeth.io/)
-- Soulbound? Dynamic SVG NFT
+- Dynamic SVG NFT
 
-Built using [Scaffold-ETH 2](https://scaffoldeth.io/) | NextJS, RainbowKit, Hardhat, Wagmi, Typescript, and daisyUI
+Built using [Scaffold-ETH 2](https://scaffoldeth.io/) | NextJS, RainbowKit, Hardhat, Wagmi, Typescript, TailwindCSS and daisyUI
 
 🧪 [Scaffold-ETH 2](https://scaffoldeth.io/) is an open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
@@ -59,12 +60,17 @@ Visit your app on: `http://localhost:3000`. You can interact with your smart con
 ## Play with this repo!
 
 <!-- Run smart contract test with `yarn hardhat:test` -->
-<!-- - Edit your smart contract `NFTContract.sol` in `packages/hardhat/contracts` -->
-<!-- - Edit your deployment scripts in `packages/hardhat/deploy` -->
 
+- Edit your smart contract `ZeroToBuidlGuidlNFT.sol` in `packages/hardhat/contracts`
+- Edit your deployment scripts in `packages/hardhat/deploy`
 - Edit your frontend in `packages/nextjs/pages`
 - Read [SE2-DOCUMENTATION](./SE2-DOCUMENTATION.md) to learn how this repo works!
 
 ## Development notes
 
 You can check current development notes [here](https://lulox.notion.site/0-to-BuidlGuidl-4126ce65cc8d45158d6c3e1b2eebe28f?pvs=4)
+
+Reference repos used for building this one:
+
+- [BuidlGuidl Dynamic SVG NFT (BuidlGuidl Tabard)](https://app.buidlguidl.com/build/NxKk0AQM5LBm2ks4aSZr)
+- [SE2-MoodNFT](https://app.buidlguidl.com/build/3zdTZJx6Au5qL6BDbdfc)

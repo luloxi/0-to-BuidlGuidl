@@ -22,13 +22,13 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  // const sadSvg = fs.readFileSync("./images/sad.svg", { encoding: "utf8" });
-  // const happySvg = fs.readFileSync("./images/happy.svg", { encoding: "utf8" });
+  const curatorAddress = "0xfBD9Ca40386A8C632cf0529bbb16b4BEdB59a0A0";
+  const buidlguidlAddress = "0x97843608a00e2bbc75ab0C1911387E002565DEDE";
 
-  await deploy("MoodNft", {
+  await deploy("ZeroToBuidlGuidlNFT", {
     from: deployer,
     // Contract constructor arguments
-    // args: [sadSvg, happySvg],
+    args: [curatorAddress, buidlguidlAddress],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.
@@ -43,4 +43,4 @@ export default deployYourContract;
 
 // Tags are useful if you have multiple deploy files and only want to run one of them.
 // e.g. yarn deploy --tags YourContract
-deployYourContract.tags = ["MoodNft"];
+deployYourContract.tags = ["ZeroToBuidlGuidlNFT"];
