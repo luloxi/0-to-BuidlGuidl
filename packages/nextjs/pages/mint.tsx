@@ -63,15 +63,17 @@ const Home: NextPage = () => {
 
       <NFTContainer connectedAddress={connectedAddress} />
       <hr />
-      <div className="flex justify-center items-center gap-3">
-        <p>
+      <div className="flex justify-center items-center gap-3 mt-4">
+        <div className="flex flex-col items-center">
           <div className="flex items-center">
             Contract actually holds <Balance address={ZeroToBuidlGuidlNFT?.address} />
           </div>
           This button sends all funds in the contract to its rightful receivers! <br />
-          <strong>Wanna pay for the gas?</strong> Be our guest! 😜
-          <br />
-        </p>
+          <span>
+            <strong>Wanna pay for the gas?</strong> Be our guest! 😜
+          </span>
+        </div>
+        <br />
         <button className="btn btn-error" onClick={() => withdrawFunds()}>
           Withdraw funds
         </button>

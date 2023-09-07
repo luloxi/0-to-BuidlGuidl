@@ -5,7 +5,7 @@ const contracts = {
       name: "localhost",
       contracts: {
         ReverseRecords: {
-          address: "0x59b670e9fA9D0A427751Af201D676719a970857b",
+          address: "0x5FbDB2315678afecb367f032d93F642f64180aa3",
           abi: [
             {
               inputs: [
@@ -29,7 +29,7 @@ const contracts = {
           ],
         },
         ZeroToBuidlGuidlNFT: {
-          address: "0x67d269191c92Caf3cD7723F116c85e6E9bf55933",
+          address: "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
           abi: [
             {
               inputs: [
@@ -41,6 +41,46 @@ const contracts = {
               ],
               stateMutability: "nonpayable",
               type: "constructor",
+            },
+            {
+              inputs: [],
+              name: "AccountBalanceOverflow",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "BalanceQueryForZeroAddress",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "NotOwnerNorApproved",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "TokenAlreadyExists",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "TokenDoesNotExist",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "TransferFromIncorrectOwner",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "TransferToNonERC721ReceiverImplementer",
+              type: "error",
+            },
+            {
+              inputs: [],
+              name: "TransferToZeroAddress",
+              type: "error",
             },
             {
               inputs: [],
@@ -79,13 +119,13 @@ const contracts = {
                 {
                   indexed: true,
                   internalType: "address",
-                  name: "approved",
+                  name: "account",
                   type: "address",
                 },
                 {
                   indexed: true,
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
               ],
@@ -110,7 +150,7 @@ const contracts = {
                 {
                   indexed: false,
                   internalType: "bool",
-                  name: "approved",
+                  name: "isApproved",
                   type: "bool",
                 },
               ],
@@ -148,7 +188,7 @@ const contracts = {
                 {
                   indexed: true,
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
               ],
@@ -163,18 +203,18 @@ const contracts = {
               inputs: [
                 {
                   internalType: "address",
-                  name: "to",
+                  name: "account",
                   type: "address",
                 },
                 {
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
               ],
               name: "approve",
               outputs: [],
-              stateMutability: "nonpayable",
+              stateMutability: "payable",
               type: "function",
             },
             {
@@ -189,7 +229,7 @@ const contracts = {
               outputs: [
                 {
                   internalType: "uint256",
-                  name: "",
+                  name: "result",
                   type: "uint256",
                 },
               ],
@@ -200,7 +240,7 @@ const contracts = {
               inputs: [
                 {
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
               ],
@@ -208,7 +248,7 @@ const contracts = {
               outputs: [
                 {
                   internalType: "address",
-                  name: "",
+                  name: "result",
                   type: "address",
                 },
               ],
@@ -245,7 +285,7 @@ const contracts = {
               outputs: [
                 {
                   internalType: "bool",
-                  name: "",
+                  name: "result",
                   type: "bool",
                 },
               ],
@@ -288,14 +328,14 @@ const contracts = {
                   type: "string",
                 },
               ],
-              stateMutability: "view",
+              stateMutability: "pure",
               type: "function",
             },
             {
               inputs: [
                 {
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
               ],
@@ -303,7 +343,7 @@ const contracts = {
               outputs: [
                 {
                   internalType: "address",
-                  name: "",
+                  name: "result",
                   type: "address",
                 },
               ],
@@ -324,13 +364,13 @@ const contracts = {
                 },
                 {
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
               ],
               name: "safeTransferFrom",
               outputs: [],
-              stateMutability: "nonpayable",
+              stateMutability: "payable",
               type: "function",
             },
             {
@@ -347,7 +387,7 @@ const contracts = {
                 },
                 {
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
                 {
@@ -358,7 +398,7 @@ const contracts = {
               ],
               name: "safeTransferFrom",
               outputs: [],
-              stateMutability: "nonpayable",
+              stateMutability: "payable",
               type: "function",
             },
             {
@@ -370,7 +410,7 @@ const contracts = {
                 },
                 {
                   internalType: "bool",
-                  name: "approved",
+                  name: "isApproved",
                   type: "bool",
                 },
               ],
@@ -391,7 +431,7 @@ const contracts = {
               outputs: [
                 {
                   internalType: "bool",
-                  name: "",
+                  name: "result",
                   type: "bool",
                 },
               ],
@@ -421,7 +461,7 @@ const contracts = {
                   type: "string",
                 },
               ],
-              stateMutability: "view",
+              stateMutability: "pure",
               type: "function",
             },
             {
@@ -475,13 +515,13 @@ const contracts = {
                 },
                 {
                   internalType: "uint256",
-                  name: "tokenId",
+                  name: "id",
                   type: "uint256",
                 },
               ],
               name: "transferFrom",
               outputs: [],
-              stateMutability: "nonpayable",
+              stateMutability: "payable",
               type: "function",
             },
             {

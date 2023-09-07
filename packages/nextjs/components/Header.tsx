@@ -3,12 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import {
-  Bars3Icon,
-  BoltIcon,
-  BookOpenIcon,
-  BugAntIcon,
+  Bars3Icon, // BoltIcon,
+  BookOpenIcon, // BugAntIcon,
   HomeIcon,
-  ShareIcon, // SparklesIcon,
+  ShareIcon,
+  SparklesIcon, // MagnifyingGlassIcon
 } from "@heroicons/react/24/outline";
 import { FaucetButton, RainbowKitCustomConnectButton } from "~~/components/scaffold-eth";
 import { useOutsideClick } from "~~/hooks/scaffold-eth";
@@ -57,7 +56,7 @@ export const Header = () => {
       </li>
       <li>
         <NavLink href="/mint">
-          <BoltIcon className="h-4 w-4" />
+          <SparklesIcon className="h-4 w-4" />
           Mint NFT
         </NavLink>
       </li>
@@ -68,12 +67,19 @@ export const Header = () => {
         </NavLink>
       </li>
 
-      <li>
+      {/* <li>
         <NavLink href="/debug">
           <BugAntIcon className="h-4 w-4" />
           Debug Contracts
         </NavLink>
-      </li>
+      </li> */}
+
+      {/* <li>
+        <NavLink href="/blockexplorer">
+          <MagnifyingGlassIcon className="h-4 w-4" />
+          Block Explorer
+        </NavLink>
+      </li> */}
     </>
   );
 

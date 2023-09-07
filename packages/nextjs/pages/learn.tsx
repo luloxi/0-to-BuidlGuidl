@@ -28,7 +28,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
-            <p className="text-xl max-w-lg">Basics about Ethereum and JavaScript:</p>
+            <p className="text-xl max-w-lg">Basics about Ethereum and web development:</p>
             <ul>
               <li>
                 -{" "}
@@ -54,13 +54,13 @@ const Home: NextPage = () => {
                   Foundations Course - The Odin Project
                 </Link>{" "}
               </li>
-              <li>
+              {/* <li>
                 -{" "}
                 <Link href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank" className="underline">
                   Learn JavaScript - Full Course for Beginners
                 </Link>{" "}
                 (3 hs video)
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

@@ -1,9 +1,8 @@
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { DeployFunction } from "hardhat-deploy/types";
-// import fs from "fs";
 
 /**
- * Deploys a contract named "YourContract" using the deployer account and
+ * Deploys a contract named "ZeroToBuidlGuidl" using the deployer account and
  * constructor arguments set to the deployer address
  *
  * @param hre HardhatRuntimeEnvironment object.
@@ -24,19 +23,19 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
 
   // UNCOMMENT THIS FOR DEPLOYING ON MAINNET
 
-  // const reverseRecordsAddress = "0x3671aE578E63FdF66ad4F3E12CC0c0d71Ac7510C";
+  const reverseRecordsAddress = "0x3671aE578E63FdF66ad4F3E12CC0c0d71Ac7510C";
 
-  // UNCOMMENT THIS FOR TESTING ON LOCALHOST
+  // UNCOMMENT THIS FOR DEPLOYING ON LOCALHOST
 
-  await deploy("ReverseRecords", {
-    // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
-    from: deployer,
-    // args: [],
-    log: true,
-  });
+  // await deploy("ReverseRecords", {
+  //   // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
+  //   from: deployer,
+  //   // args: [],
+  //   log: true,
+  // });
 
-  const reverseRecords = await hre.ethers.getContract("ReverseRecords", deployer);
-  const reverseRecordsAddress = reverseRecords.address;
+  // const reverseRecords = await hre.ethers.getContract("ReverseRecords", deployer);
+  // const reverseRecordsAddress = reverseRecords.address;
 
   // DEPLOY THE CONTRACT
 

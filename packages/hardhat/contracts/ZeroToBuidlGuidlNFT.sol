@@ -1,9 +1,9 @@
-// SPDX-License-Identifier: MIT
+    // SPDX-License-Identifier: MIT
 pragma solidity 0.8.19;
 
-import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
-import {Strings} from "@openzeppelin/contracts/utils/Strings.sol";
-import {Base64} from "@openzeppelin/contracts/utils/Base64.sol";
+import {ERC721} from "solady/src/tokens/ERC721.sol";
+import {LibString} from "solady/src/utils/LibString.sol";
+import {Base64} from "solady/src/utils/Base64.sol";
 
 error ZeroToBuidlGuidlNFT__CantSwitchThemeIfNotOwner();
 error ZeroToBuidlGuidlNFT__CantTransferIfNotOwner();
@@ -30,19 +30,16 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
 
     event CreatedNFT(uint256 indexed tokenId);
 
-    constructor(address _reverseRecordsAddress) ERC721("0-to-BuidlGuidl Donation", "02BG") {
+    constructor(address _reverseRecordsAddress) {
         s_tokenCounter = 0;
         ensReverseRecords = IReverseRecords(_reverseRecordsAddress);
     }
 
-    receive() external payable {
-        mintNft();
-    }
+    /*´:°•.°+.*•´.*:˚.°*.˚•´.°:°•.°•.*•´.*:˚.°*.˚•´.°:°•.°+.*•´.*:*/
+    /*                      TOKEN DYNAMICS                        */
+    /*.•°:°.´+˚.*°.˚:*.´•*.+°.•°:´*.´•*.•°.•°:°.´:•˚°.*°.˚:*.´+°.•*/
 
-    fallback() external payable {
-        mintNft();
-    }
-
+    /// @dev Mints a new NFT and sends the donation to the contract
     function mintNft() public payable {
         if (msg.value < 0.01 ether) {
             revert ZeroToBuidlGuidlNFT__KeepIt_YouNeedItMore();
@@ -61,6 +58,17 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
         s_tokenCounter = s_tokenCounter + 1;
     }
 
+    /// @dev If ETH is sent to this contract,  it attempts to mint a new NFT and store the donation
+    receive() external payable {
+        mintNft();
+    }
+
+    /// @dev If ETH is sent with an incorrect function signature, it attempts to mint a new NFT and store the donation
+    fallback() external payable {
+        mintNft();
+    }
+
+    /// @dev Transfers `tokenId` from `from` to `to`.
     function transfer(address to, uint256 tokenId) public {
         if (!_isApprovedOrOwner(msg.sender, tokenId)) {
             revert ZeroToBuidlGuidlNFT__CantTransferIfNotOwner();
@@ -69,6 +77,7 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
         _transfer(msg.sender, to, tokenId);
     }
 
+    /// @dev Switches the theme of the NFT between dark and light
     function switchTheme(uint256 tokenId) public {
         if (!_isApprovedOrOwner(msg.sender, tokenId)) {
             revert ZeroToBuidlGuidlNFT__CantSwitchThemeIfNotOwner();
@@ -81,34 +90,47 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
         }
     }
 
+    /// @dev Sends contract funds to curator and buidlguidl
     function withdrawFunds() public {
         uint256 contractBalance = address(this).balance;
         if (contractBalance == 0) {
             revert ZeroToBuidlGuidlNFT__NoBalanceToWithdraw();
         }
 
-        uint256 halfOfContractBalance = contractBalance / 2;
+        uint256 curatorShare = contractBalance / 2;
+        uint256 buidlGuidlShare = contractBalance - curatorShare;
 
-        (bool curatorSuccess,) = payable(CURATOR_ADDRESS).call{value: halfOfContractBalance}("");
+        (bool curatorSuccess,) = payable(CURATOR_ADDRESS).call{value: curatorShare}("");
         if (!curatorSuccess) {
             revert ZeroToBuidlGuidlNFT__WithdrawFailed();
         }
 
-        (bool buidlguidlSuccess,) = payable(BUIDLGUIDL_ADDRESS).call{value: halfOfContractBalance}("");
+        (bool buidlguidlSuccess,) = payable(BUIDLGUIDL_ADDRESS).call{value: buidlGuidlShare}("");
         if (!buidlguidlSuccess) {
             revert ZeroToBuidlGuidlNFT__WithdrawFailed();
         }
     }
 
-    function getTokenCounter() public view returns (uint256) {
-        return s_tokenCounter;
+    /*´:°•.°+.*•´.*:˚.°*.˚•´.°:°•.°•.*•´.*:˚.°*.˚•´.°:°•.°+.*•´.*:*/
+    /*                      ERC721 METADATA                       */
+    /*.•°:°.´+˚.*°.˚:*.´•*.+°.•°:´*.´•*.•°.•°:°.´:•˚°.*°.˚:*.´+°.•*/
+
+    /// @dev Returns the token collection name.
+    function name() public pure override returns (string memory) {
+        return "0-to-BuidlGuidl Donation";
     }
 
+    /// @dev Returns the token collection symbol.
+    function symbol() public pure override returns (string memory) {
+        return "02BG";
+    }
+
+    /// @dev Returns the Uniform Resource Identifier (URI) for token `id`.
     function tokenURI(uint256 id) public view override returns (string memory) {
         return _buildTokenURI(id);
     }
 
-    // Constructs the encoded svg string to be returned by tokenURI()
+    /// @dev Constructs the encoded svg string to be returned by tokenURI()
     function _buildTokenURI(uint256 id) internal view returns (string memory) {
         address tokenMinter = s_tokenIdToTokenMinter[id];
         uint256 mintedBlockNumber = s_tokenIdToBlockNumber[id];
@@ -134,7 +156,7 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
                         backgroundColor,
                         '" />',
                         '<text x="20" y="30">On block #',
-                        Strings.toString(mintedBlockNumber),
+                        LibString.toString(mintedBlockNumber),
                         "</text>",
                         '<text x="20" y="70" style="font-size:28px; font-weight: 600;"> ',
                         lookupENSName(tokenMinter),
@@ -174,7 +196,14 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
         );
     }
 
-    /* ========== HELPER FUNCTIONS ========== */
+    /*´:°•.°+.*•´.*:˚.°*.˚•´.°:°•.°•.*•´.*:˚.°*.˚•´.°:°•.°+.*•´.*:*/
+    /*                      HELPER FUNCTIONS                      */
+    /*.•°:°.´+˚.*°.˚:*.´•*.+°.•°:´*.´•*.•°.•°:°.´:•˚°.*°.˚:*.´+°.•*/
+
+    /// @notice Returns the current token counter
+    function getTokenCounter() public view returns (uint256) {
+        return s_tokenCounter;
+    }
 
     /// @notice Checks ENS reverse records if address has an ens name, else returns blank string
     function lookupENSName(address addr) public view returns (string memory) {
@@ -184,6 +213,7 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
         return results[0];
     }
 
+    /// @notice Converts address to string
     function addressToString(address x) internal pure returns (string memory) {
         bytes memory s = new bytes(40);
         for (uint256 i = 0; i < 20; i++) {
@@ -196,6 +226,9 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
         return string(s);
     }
 
+    /// @notice Converts a single-byte `b` into its ASCII character representation.
+    /// @param b The input byte.
+    /// @return c The ASCII character byte.
     function char(bytes1 b) internal pure returns (bytes1 c) {
         if (uint8(b) < 10) return bytes1(uint8(b) + 0x30);
         else return bytes1(uint8(b) + 0x57);
@@ -206,10 +239,10 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
         uint256 amountInFinney = amountInWei / 1e15; // 1 finney == 1e15
         return string(
             abi.encodePacked(
-                Strings.toString(amountInFinney / 1000), // integer (left of decimal)
+                LibString.toString(amountInFinney / 1000), // integer (left of decimal)
                 ".",
-                Strings.toString((amountInFinney % 1000) / 100), // first decimal
-                Strings.toString(((amountInFinney % 1000) % 100) / 10) // second decimal
+                LibString.toString((amountInFinney % 1000) / 100), // first decimal
+                LibString.toString(((amountInFinney % 1000) % 100) / 10) // second decimal
             )
         );
     }

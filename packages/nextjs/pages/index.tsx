@@ -27,7 +27,7 @@ const Home: NextPage = () => {
                 free learning resources
               </Link>{" "}
               will get you started.
-              <p />
+              <br />
               <strong className="text-yellow-500">Got web3 skills?</strong> Go to{" "}
               <Link className="underline" href="https://speedrunethereum.com/" target="_blank">
                 SpeedRunEthereum
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
                 </Link>
               </strong>
               .
-              <p />
+              <br />
               <strong className="text-green-500">After you join, build dApps</strong> for the Ethereum blockchain with{" "}
               <strong>
                 <Link className="underline" href="https://scaffoldeth.io/" target="_blank">
