@@ -17,6 +17,10 @@ enum Theme {
 }
 
 contract ZeroToBuidlGuidlNFT is ERC721 {
+    /*´:°•.°+.*•´.*:˚.°*.˚•´.°:°•.°•.*•´.*:˚.°*.˚•´.°:°•.°+.*•´.*:*/
+    /*                      STATE VARIABLES                       */
+    /*.•°:°.´+˚.*°.˚:*.´•*.+°.•°:´*.´•*.•°.•°:°.´:•˚°.*°.˚:*.´+°.•*/
+
     address private constant CURATOR_ADDRESS = 0xfBD9Ca40386A8C632cf0529bbb16b4BEdB59a0A0;
     address private constant BUIDLGUIDL_ADDRESS = 0x97843608a00e2bbc75ab0C1911387E002565DEDE;
     IReverseRecords private immutable ensReverseRecords;
