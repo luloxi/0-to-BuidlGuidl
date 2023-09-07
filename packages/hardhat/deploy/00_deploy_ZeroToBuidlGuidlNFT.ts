@@ -22,13 +22,28 @@ const deployYourContract: DeployFunction = async function (hre: HardhatRuntimeEn
   const { deployer } = await hre.getNamedAccounts();
   const { deploy } = hre.deployments;
 
-  const curatorAddress = "0xfBD9Ca40386A8C632cf0529bbb16b4BEdB59a0A0";
-  const buidlguidlAddress = "0x97843608a00e2bbc75ab0C1911387E002565DEDE";
+  // UNCOMMENT THIS FOR DEPLOYING ON MAINNET
+
+  // const reverseRecordsAddress = "0x3671aE578E63FdF66ad4F3E12CC0c0d71Ac7510C";
+
+  // UNCOMMENT THIS FOR TESTING ON LOCALHOST
+
+  await deploy("ReverseRecords", {
+    // Learn more about args here: https://www.npmjs.com/package/hardhat-deploy#deploymentsdeploy
+    from: deployer,
+    // args: [],
+    log: true,
+  });
+
+  const reverseRecords = await hre.ethers.getContract("ReverseRecords", deployer);
+  const reverseRecordsAddress = reverseRecords.address;
+
+  // DEPLOY THE CONTRACT
 
   await deploy("ZeroToBuidlGuidlNFT", {
     from: deployer,
     // Contract constructor arguments
-    args: [curatorAddress, buidlguidlAddress],
+    args: [reverseRecordsAddress],
     log: true,
     // autoMine: can be passed to the deploy function to make the deployment process faster on local networks by
     // automatically mining the contract deployment transaction. There is no effect on live networks.

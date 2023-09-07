@@ -28,21 +28,34 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
-            <p className="text-xl max-w-lg">Basics about Ethereum, JavaScript and web3 dapp building:</p>
+            <p className="text-xl max-w-lg">Basics about Ethereum and JavaScript:</p>
             <ul>
               <li>
+                -{" "}
                 <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
                   What is Ethereum?
                 </Link>{" "}
                 (1 min read)
               </li>
               <li>
+                -{" "}
                 <Link href="https://ethereum.foundation/infinitegarden" target="_blank" className="underline">
                   The Infinite Garden
                 </Link>{" "}
                 (1 min read)
               </li>
               <li>
+                -{" "}
+                <Link
+                  href="https://www.theodinproject.com/paths/foundations/courses/foundations"
+                  target="_blank"
+                  className="underline"
+                >
+                  Foundations Course - The Odin Project
+                </Link>{" "}
+              </li>
+              <li>
+                -{" "}
                 <Link href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank" className="underline">
                   Learn JavaScript - Full Course for Beginners
                 </Link>{" "}

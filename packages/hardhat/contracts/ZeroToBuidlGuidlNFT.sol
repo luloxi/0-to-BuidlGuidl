@@ -17,9 +17,11 @@ enum Theme {
 }
 
 contract ZeroToBuidlGuidlNFT is ERC721 {
+    address private constant CURATOR_ADDRESS = 0xfBD9Ca40386A8C632cf0529bbb16b4BEdB59a0A0;
+    address private constant BUIDLGUIDL_ADDRESS = 0x97843608a00e2bbc75ab0C1911387E002565DEDE;
+    IReverseRecords private immutable ensReverseRecords;
+
     uint256 private s_tokenCounter;
-    address public curatorAddress;
-    address public buidlguidlAddress;
 
     mapping(uint256 => Theme) private s_tokenIdToTheme;
     mapping(uint256 => uint256) private s_tokenIdToBlockNumber;
@@ -28,10 +30,9 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
 
     event CreatedNFT(uint256 indexed tokenId);
 
-    constructor(address _curatorAddress, address _buidlguidlAddress) ERC721("0-to-BuidlGuidl Donation", "0BGD") {
-        curatorAddress = _curatorAddress;
-        buidlguidlAddress = _buidlguidlAddress;
+    constructor(address _reverseRecordsAddress) ERC721("0-to-BuidlGuidl Donation", "02BG") {
         s_tokenCounter = 0;
+        ensReverseRecords = IReverseRecords(_reverseRecordsAddress);
     }
 
     receive() external payable {
@@ -47,17 +48,17 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
             revert ZeroToBuidlGuidlNFT__KeepIt_YouNeedItMore();
         }
 
-        uint256 mintedBlockNumber = block.number;
         address tokenMinter = msg.sender;
-        uint256 donatedAmount = msg.value;
 
-        _safeMint(msg.sender, s_tokenCounter);
-        s_tokenIdToTheme[s_tokenCounter] = Theme.DARK;
-        s_tokenIdToBlockNumber[s_tokenCounter] = mintedBlockNumber;
+        _safeMint(tokenMinter, s_tokenCounter);
+
         s_tokenIdToTokenMinter[s_tokenCounter] = tokenMinter;
-        s_tokenIdToDonation[s_tokenCounter] = donatedAmount;
-        s_tokenCounter = s_tokenCounter + 1;
+        s_tokenIdToBlockNumber[s_tokenCounter] = block.number;
+        s_tokenIdToDonation[s_tokenCounter] = msg.value;
+        s_tokenIdToTheme[s_tokenCounter] = Theme.DARK;
+
         emit CreatedNFT(s_tokenCounter);
+        s_tokenCounter = s_tokenCounter + 1;
     }
 
     function transfer(address to, uint256 tokenId) public {
@@ -86,15 +87,14 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
             revert ZeroToBuidlGuidlNFT__NoBalanceToWithdraw();
         }
 
-        uint256 curatorShare = contractBalance / 2;
-        uint256 buidlguidlShare = contractBalance - curatorShare;
+        uint256 halfOfContractBalance = contractBalance / 2;
 
-        (bool curatorSuccess,) = payable(curatorAddress).call{value: curatorShare}("");
+        (bool curatorSuccess,) = payable(CURATOR_ADDRESS).call{value: halfOfContractBalance}("");
         if (!curatorSuccess) {
             revert ZeroToBuidlGuidlNFT__WithdrawFailed();
         }
 
-        (bool buidlguidlSuccess,) = payable(buidlguidlAddress).call{value: buidlguidlShare}("");
+        (bool buidlguidlSuccess,) = payable(BUIDLGUIDL_ADDRESS).call{value: halfOfContractBalance}("");
         if (!buidlguidlSuccess) {
             revert ZeroToBuidlGuidlNFT__WithdrawFailed();
         }
@@ -133,23 +133,23 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
                         '<rect width="400" height="400" fill="',
                         backgroundColor,
                         '" />',
-                        '<text x="20" y="40">On block #',
+                        '<text x="20" y="30">On block #',
                         Strings.toString(mintedBlockNumber),
                         "</text>",
-                        '<text x="20" y="70" style="font-size:14px;">0x',
+                        '<text x="20" y="70" style="font-size:28px; font-weight: 600;"> ',
+                        lookupENSName(tokenMinter),
+                        "</text>",
+                        '<text x="20" y="90" style="font-size:14px;">0x',
                         addressToString(tokenMinter),
                         "</text>",
-                        '<text x="20" y="105">found wisdom in</text>',
-                        '<text class="h1" x="20" y="160">0 to BuidlGuidl</text>',
-                        unicode'<text x="20" y="200">and donated Ξ ',
+                        '<text x="20" y="130">found wisdom in</text>',
+                        '<text class="h1" x="20" y="175">0 to BuidlGuidl</text>',
+                        unicode'<text x="20" y="210">and donated Ξ ',
                         weiToEtherString(donatedAmount),
                         "</text>",
-                        unicode'<text x="40" y="285" style="font-size:70px;">🐣...🏰</text>',
-                        unicode'<text x="20" y="340">Thanks for the wei,</text>',
-                        unicode'<text x="20" y="370">and good luck on your way!</text>',
-                        '<text x="20" y="350" style="font-size:28px;"> ',
-                        // lookupENSName(boundAddress),
-                        "</text>",
+                        unicode'<text x="40" y="295" style="font-size:70px;">🐣...🏰</text>',
+                        unicode'<text x="20" y="350">Thanks for the wei,</text>',
+                        unicode'<text x="20" y="380">and good luck on your way!</text>',
                         "</svg>"
                     )
                 )
@@ -172,6 +172,16 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
                 )
             )
         );
+    }
+
+    /* ========== HELPER FUNCTIONS ========== */
+
+    /// @notice Checks ENS reverse records if address has an ens name, else returns blank string
+    function lookupENSName(address addr) public view returns (string memory) {
+        address[] memory t = new address[](1);
+        t[0] = addr;
+        string[] memory results = ensReverseRecords.getNames(t);
+        return results[0];
     }
 
     function addressToString(address x) internal pure returns (string memory) {
@@ -203,4 +213,10 @@ contract ZeroToBuidlGuidlNFT is ERC721 {
             )
         );
     }
+}
+
+/// @notice ENS reverse record contract for resolving address to ENS name
+/// https://github.com/ensdomains/reverse-records/blob/master/contracts/ReverseRecords.sol
+interface IReverseRecords {
+    function getNames(address[] calldata addresses) external view returns (string[] memory r);
 }

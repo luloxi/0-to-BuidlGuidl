@@ -4,19 +4,38 @@ const contracts = {
       chainId: "31337",
       name: "localhost",
       contracts: {
+        ReverseRecords: {
+          address: "0x59b670e9fA9D0A427751Af201D676719a970857b",
+          abi: [
+            {
+              inputs: [
+                {
+                  internalType: "address[]",
+                  name: "addresses",
+                  type: "address[]",
+                },
+              ],
+              name: "getNames",
+              outputs: [
+                {
+                  internalType: "string[]",
+                  name: "r",
+                  type: "string[]",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+          ],
+        },
         ZeroToBuidlGuidlNFT: {
-          address: "0x9A676e781A523b5d0C0e43731313A708CB607508",
+          address: "0x67d269191c92Caf3cD7723F116c85e6E9bf55933",
           abi: [
             {
               inputs: [
                 {
                   internalType: "address",
-                  name: "_curatorAddress",
-                  type: "address",
-                },
-                {
-                  internalType: "address",
-                  name: "_buidlguidlAddress",
+                  name: "_reverseRecordsAddress",
                   type: "address",
                 },
               ],
@@ -178,32 +197,6 @@ const contracts = {
               type: "function",
             },
             {
-              inputs: [],
-              name: "buidlguidlAddress",
-              outputs: [
-                {
-                  internalType: "address",
-                  name: "",
-                  type: "address",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-            {
-              inputs: [],
-              name: "curatorAddress",
-              outputs: [
-                {
-                  internalType: "address",
-                  name: "",
-                  type: "address",
-                },
-              ],
-              stateMutability: "view",
-              type: "function",
-            },
-            {
               inputs: [
                 {
                   internalType: "uint256",
@@ -254,6 +247,25 @@ const contracts = {
                   internalType: "bool",
                   name: "",
                   type: "bool",
+                },
+              ],
+              stateMutability: "view",
+              type: "function",
+            },
+            {
+              inputs: [
+                {
+                  internalType: "address",
+                  name: "addr",
+                  type: "address",
+                },
+              ],
+              name: "lookupENSName",
+              outputs: [
+                {
+                  internalType: "string",
+                  name: "",
+                  type: "string",
                 },
               ],
               stateMutability: "view",
