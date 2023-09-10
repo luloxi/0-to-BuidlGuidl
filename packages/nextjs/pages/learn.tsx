@@ -54,6 +54,16 @@ const Home: NextPage = () => {
                   Foundations Course - The Odin Project
                 </Link>{" "}
               </li>
+              <li>
+                -{" "}
+                <Link
+                  href="https://www.freecodecamp.org/news/learning-to-code-tips/"
+                  target="_blank"
+                  className="underline"
+                >
+                  Tips for Learning to Code – How to Stay Consistent and Enjoy Yourself
+                </Link>{" "}
+              </li>
               {/* <li>
                 -{" "}
                 <Link href="https://www.youtube.com/watch?v=PkZNo7MFNFg" target="_blank" className="underline">
