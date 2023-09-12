@@ -13,8 +13,8 @@ Built using [Scaffold-ETH 2](https://scaffoldeth.io/) | NextJS, RainbowKit, Hard
 
 🧪 [Scaffold-ETH 2](https://scaffoldeth.io/) is an open-source, up-to-date toolkit for building decentralized applications (dapps) on the Ethereum blockchain. It's designed to make it easier for developers to create and deploy smart contracts and build user interfaces that interact with those contracts.
 
-v1 Smart contract is more gas efficient thanks to [Solady](https://github.com/Vectorized/solady/tree/main) <- Version currently deployed
-v2 contract is even more gas efficient thanks to [McToady's gas audit](https://github.com/McCoady/zero-to-bg-gas-audit/)
+- v1 Smart contract is more gas efficient thanks to [Solady](https://github.com/Vectorized/solady/tree/main) <- Version currently deployed
+- v2 contract is even more gas efficient thanks to [McToady's gas audit](https://github.com/McCoady/zero-to-bg-gas-audit/)
 
 ## Run this repo on your computer!
 
