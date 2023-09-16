@@ -6,25 +6,27 @@ const Home: NextPage = () => {
   return (
     <>
       <MetaHeader />
-      {/* Intro */}
-      <div className="flex flex-col items-center pt-4">
+
+      {/* Header text */}
+      <div className="flex flex-col items-center p-4">
         <h1 className="text-5xl text-center ">Learn the ETH tech stack!</h1>
-        <p className="text-xl max-w-lg">
-          To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
-          started:
-        </p>
+        <div className="flex flex-col md:flex-row items-center gap-6 ">
+          <div className="md:w-2/3">
+            <p className="text-xl max-w-lg">
+              To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
+              started:
+            </p>
+          </div>
+        </div>
       </div>
 
       {/* 0. Intro */}
-      <div className="flex flex-col items-center pb-4 bg-primary">
+      <div className="flex flex-col items-center p-4 bg-primary">
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/3 flex justify-center">
-            <span className="text-8xl py-4">🐣</span>
+            <span className="text-8xl pt-4">🐣</span>
           </div>
-
-          {/* This div will be in the middle on larger screens */}
-          {/* <div className="md:w-1/2"></div> */}
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
@@ -87,11 +89,12 @@ const Home: NextPage = () => {
             <span className="text-8xl pt-4">🐥</span>
           </div>
 
-          {/* This div will be in the middle on larger screens */}
-          {/* <div className="md:w-1/2"></div> */}
-
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
+            <p className="text-xl max-w-lg">
+              To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
+              started:
+            </p>
             <p className="text-xl max-w-lg">
               To create production ready dApps from scratch using{" "}
               <Link className="underline" target="_blank" href="https://scaffoldeth.io/">
