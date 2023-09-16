@@ -10,7 +10,7 @@ interface NFTContainerProps {
 }
 
 const NFTContainer: React.FC<NFTContainerProps> = ({ connectedAddress }) => {
-  const [showAllNFTs, setShowAllNFTs] = useState<boolean>(false);
+  const [showAllNFTs, setShowAllNFTs] = useState<boolean>(true);
   const [parsedNFTInfoData, setParsedNFTInfoData] = useState<any[] | null>(null);
   const [displayCount, setDisplayCount] = useState<number>(12);
   const [ownerData, setOwnerData] = useState<string[]>([]);
@@ -117,18 +117,6 @@ const NFTContainer: React.FC<NFTContainerProps> = ({ connectedAddress }) => {
 
   return (
     <div className="flex flex-col gap-4 my-8 px-5 justify-center">
-      <div className="flex justify-center">
-        <div>
-          {/* Toggle button */}
-          <label htmlFor="showOnlyYourNFTs">Show only your NFTs: </label>
-          <input
-            type="checkbox"
-            id="showOnlyYourNFTs"
-            checked={!showAllNFTs} // Invert the checked state
-            onChange={handleToggleChange} // No need to change the handler
-          />
-        </div>
-      </div>
       <div className="flex flex-wrap gap-4 justify-center">
         {NFTOwnerData &&
           displayedNFTInfoData?.map((data, index) => (
@@ -159,6 +147,16 @@ const NFTContainer: React.FC<NFTContainerProps> = ({ connectedAddress }) => {
           <option value={48}>48</option>
           <option value={60}>60</option>
         </select>{" "}
+        <div>
+          {/* Toggle button */}
+          <label htmlFor="showOnlyYourNFTs">Show only your NFTs: </label>
+          <input
+            type="checkbox"
+            id="showOnlyYourNFTs"
+            checked={!showAllNFTs} // Invert the checked state
+            onChange={handleToggleChange} // No need to change the handler
+          />
+        </div>
       </div>
     </div>
   );

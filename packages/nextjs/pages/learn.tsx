@@ -11,7 +11,7 @@ const Home: NextPage = () => {
       <div className="flex flex-col items-center p-4">
         <h1 className="text-5xl text-center ">Learn the ETH tech stack!</h1>
         <div className="flex flex-col md:flex-row items-center gap-6 ">
-          <div className="md:w-2/3">
+          <div className="">
             <p className="text-xl max-w-lg">
               To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
               started:
@@ -21,7 +21,7 @@ const Home: NextPage = () => {
       </div>
 
       {/* 0. Intro */}
-      <div className="flex flex-col items-center p-4 bg-primary">
+      <div className="flex flex-col items-center px-4 pb-4 bg-primary">
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/3 flex justify-center">
@@ -91,10 +91,6 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
-            <p className="text-xl max-w-lg">
-              To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
-              started:
-            </p>
             <p className="text-xl max-w-lg">
               To create production ready dApps from scratch using{" "}
               <Link className="underline" target="_blank" href="https://scaffoldeth.io/">
@@ -279,13 +275,6 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link href="https://www.youtube.com/watch?v=ft30zcMlFao" target="_blank" className="underline">
-                  Learn Tailwind CSS – Course for Beginners
-                </Link>{" "}
-                (4 hs course)
-              </li>
-              <li>
-                -{" "}
                 <Link href="https://tailwindcss.com/" target="_blank" className="underline">
                   TailwindCSS Official Docs
                 </Link>{" "}
@@ -295,6 +284,13 @@ const Home: NextPage = () => {
                 <Link href="https://daisyui.com/" target="_blank" className="underline">
                   daisyUI Official Docs (TailwindCSS components)
                 </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://www.youtube.com/watch?v=ft30zcMlFao" target="_blank" className="underline">
+                  Learn Tailwind CSS – Course for Beginners
+                </Link>{" "}
+                (4 hs course)
               </li>
             </ul>
           </div>
@@ -306,17 +302,6 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link
-                  href="https://www.youtube.com/playlist?list=PLx2Y9Sna27Xt3deeeOLqW59-mdWpUWQ0T"
-                  className="underline"
-                  target="_blank"
-                >
-                  ChakraUI for Beginners
-                </Link>{" "}
-                (1 hs course)
-              </li>
-              <li>
-                -{" "}
                 <Link href="https://chakra-ui.com/getting-started" className="underline" target="_blank">
                   ChakraUI Official Docs
                 </Link>{" "}
@@ -326,6 +311,17 @@ const Home: NextPage = () => {
                 <Link href="https://chakra-templates.dev/" className="underline" target="_blank">
                   ChakraUI Templates
                 </Link>{" "}
+              </li>
+              <li>
+                -{" "}
+                <Link
+                  href="https://www.youtube.com/playlist?list=PLx2Y9Sna27Xt3deeeOLqW59-mdWpUWQ0T"
+                  className="underline"
+                  target="_blank"
+                >
+                  ChakraUI for Beginners
+                </Link>{" "}
+                (1 hs course)
               </li>
             </ul>
           </div>
