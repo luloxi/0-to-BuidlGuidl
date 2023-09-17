@@ -672,19 +672,23 @@ const Home: NextPage = () => {
             <ul>
               <li>
                 -{" "}
-                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk" target="_blank">
+                <Link className="underline" href="https://miro.com/app/board/uXjVPbc4b68=/" target="_blank">
                   ETH Tech tree
                 </Link>
               </li>
               <li>
                 -{" "}
-                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk" target="_blank">
+                <Link className="underline" href="https://eth.build/" target="_blank">
                   ETH.BUILD - Educational Sandbox for Web3
                 </Link>
               </li>
               <li>
                 -{" "}
-                <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk" target="_blank">
+                <Link
+                  className="underline"
+                  href="https://www.youtube.com/playlist?list=PLJz1HruEnenCXH7KW7wBCEBnBLOVkiqIi"
+                  target="_blank"
+                >
                   ETH.BUILD - YouTube Channel
                 </Link>
               </li>
