@@ -260,7 +260,7 @@ const Home: NextPage = () => {
 
       {/* 4. Styling */}
       <div className="flex flex-col items-center p-4 bg-primary">
-        <h2 className="text-4xl text-center">Learn frontend styling frameworks...</h2>
+        <h2 className="text-4xl text-center">Use frontend styling frameworks...</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -271,7 +271,7 @@ const Home: NextPage = () => {
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2">
             {" "}
-            <p className="text-xl">Learn TailwindCSS and daisyUI:</p>
+            <p className="text-xl">TailwindCSS and daisyUI:</p>
             <ul>
               <li>
                 -{" "}
