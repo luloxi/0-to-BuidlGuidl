@@ -600,37 +600,6 @@ const Home: NextPage = () => {
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
             {" "}
-            <p className="text-xl max-w-lg">Use GitHub to collaborate with peers:</p>
-            <ul>
-              <li>
-                -{" "}
-                <Link
-                  href="https://www.youtube.com/watch?v=RGOj5yH7evk&list=PLLJ1hZKyeCH1I8dP0UNTpWoIhsl6KpVbu&index=3"
-                  className="underline"
-                  target="_blank"
-                >
-                  Git and GitHub for Beginners - Crash Course
-                </Link>{" "}
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://skills.github.com/" className="underline" target="_blank">
-                  GitHub Skills
-                </Link>{" "}
-                - Interactive courses designed by GitHub
-              </li>
-              <li>
-                -{" "}
-                <Link href="https://desktop.github.com/" className="underline" target="_blank">
-                  GitHub Desktop
-                </Link>{" "}
-                (
-                <Link href="https://github.com/muroko/github-desktop-linux" className="underline" target="_blank">
-                  Linux version
-                </Link>
-                )
-              </li>
-            </ul>
             <p className="text-xl ">Learn more about streams:</p>
             <ul>
               <li>
@@ -648,6 +617,44 @@ const Home: NextPage = () => {
                 <Link className="underline" href="https://www.youtube.com/watch?v=9-Xg7tojUbk" target="_blank">
                   BG Labs - BG Streams, Onboarding, and Psychology
                 </Link>
+              </li>
+              <li>
+                -{" "}
+                <Link className="underline" href="https://www.youtube.com/watch?v=ivlUrYmJHw4" target="_blank">
+                  Web3 Builders Ep 1- Stealing Web2&apos;s Developers With Austin Griffith
+                </Link>
+              </li>
+            </ul>
+            <p className="text-xl max-w-lg">Use GitHub to collaborate with peers:</p>
+            <ul>
+              <li>
+                -{" "}
+                <Link href="https://desktop.github.com/" className="underline" target="_blank">
+                  GitHub Desktop
+                </Link>{" "}
+                (
+                <Link href="https://github.com/muroko/github-desktop-linux" className="underline" target="_blank">
+                  Linux version
+                </Link>
+                )
+              </li>
+              <li>
+                -{" "}
+                <Link href="https://skills.github.com/" className="underline" target="_blank">
+                  GitHub Skills
+                </Link>{" "}
+                - Interactive courses designed by GitHub
+              </li>
+
+              <li>
+                -{" "}
+                <Link
+                  href="https://www.youtube.com/watch?v=RGOj5yH7evk&list=PLLJ1hZKyeCH1I8dP0UNTpWoIhsl6KpVbu&index=3"
+                  className="underline"
+                  target="_blank"
+                >
+                  Git and GitHub for Beginners - Crash Course
+                </Link>{" "}
               </li>
             </ul>
           </div>
