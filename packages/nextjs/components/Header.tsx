@@ -22,7 +22,7 @@ const NavLink = ({ href, children }: { href: string; children: React.ReactNode }
       passHref
       className={`${
         isActive ? "bg-secondary shadow-md" : ""
-      } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 grid grid-flow-col items-center`}
+      } hover:bg-secondary hover:shadow-md focus:!bg-secondary active:!text-neutral py-1.5 px-3 text-sm rounded-full gap-2 flex items-center`}
     >
       {children}
     </Link>
@@ -45,25 +45,25 @@ export const Header = () => {
       <li>
         <NavLink href="/">
           <HomeIcon className="h-4 w-4" />
-          Home
+          <div className="grow text-center">Home</div>
         </NavLink>
       </li>
       <li>
         <NavLink href="/learn">
           <BookOpenIcon className="h-4 w-4" />
-          Learn
+          <div className="grow text-center">Learn</div>
         </NavLink>
       </li>
       <li>
         <NavLink href="/mint">
           <SparklesIcon className="h-4 w-4" />
-          Mint NFT
+          <div className="grow text-center">Mint NFT</div>
         </NavLink>
       </li>
       <li>
         <NavLink href="/share">
           <ShareIcon className="h-4 w-4" />
-          Share
+          <div className="grow text-center">Share</div>
         </NavLink>
       </li>
 
