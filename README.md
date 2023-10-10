@@ -62,8 +62,7 @@ Visit your app on: `http://localhost:3000`. You can interact with your smart con
 
 ## Play with this repo!
 
-<!-- Run smart contract test with `yarn hardhat:test` -->
-
+- Run smart contract tests with `yarn hardhat:test`
 - Edit your smart contract `ZeroToBuidlGuidlNFT.sol` in `packages/hardhat/contracts`
 - Edit your deployment scripts in `packages/hardhat/deploy`
 - Edit your frontend in `packages/nextjs/pages`
