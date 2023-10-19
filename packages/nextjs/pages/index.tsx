@@ -20,7 +20,9 @@ const Home: NextPage = () => {
             <figcaption className="text-center">No copyright infringment intended.</figcaption>
           </figure>
           <div>
-            <h1 className="text-5xl text-center">Earn a monthly ETH stream building public goods!</h1>
+            <h1 className="text-5xl text-center font-mono">
+              Earn a <strong>monthly ETH stream</strong> building public goods!
+            </h1>
             <p className="mt-6 text-lg">
               <strong className="text-red-500">New building web3?</strong> This roadmap of{" "}
               <Link className="underline" href="./learn">
@@ -50,7 +52,7 @@ const Home: NextPage = () => {
               </strong>
               .
             </p>
-            <p className="text-center text-2xl">
+            <p className="text-center text-xl font-mono">
               <strong>Share your builds</strong> with{" "}
               <Link className="underline" href="https://buidlguidl.com/" target="_blank">
                 BuidlGuidl

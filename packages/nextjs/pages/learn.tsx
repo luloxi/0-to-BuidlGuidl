@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { NextPage } from "next";
 import { MetaHeader } from "~~/components/MetaHeader";
@@ -9,12 +10,12 @@ const Home: NextPage = () => {
 
       {/* Header text */}
       <div className="flex flex-col items-center p-4">
-        <h1 className="text-5xl text-center ">Learn the ETH tech stack!</h1>
+        <h1 className="text-5xl text-center font-mono">Learn the ETH tech stack!</h1>
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           <div className="">
-            <p className="text-xl max-w-lg">
+            <p className="text-xl max-w-lg font-mono">
               To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
-              started:
+              started
             </p>
             <div className="bg-green-600 text-white text-center rounded-md">
               Sections hightlighted in green are the MOST IMPORTANT ones
@@ -23,7 +24,7 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 0. Intro */}
+      {/* Intro */}
       <div className="flex flex-col items-center px-4 pb-4 bg-primary">
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
@@ -33,7 +34,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
-            <p className="text-xl max-w-lg">Basics about Ethereum and web3:</p>
+            <p className="text-xl max-w-lg font-mono">Basics about Ethereum and web3:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
@@ -52,7 +53,7 @@ const Home: NextPage = () => {
               </li>
             </ul>
             <div className="bg-green-600 text-white pl-6 rounded-md">
-              <p className="text-xl max-w-lg">Learn web development and JavaScript:</p>
+              <p className="text-xl max-w-lg font-mono">Learn web development and JavaScript:</p>
               <ul className="list-disc">
                 <li>
                   <Link
@@ -74,9 +75,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 1. Roadmap */}
-      <div className="flex flex-col items-center p-4 bg-slate-900 text-warning">
-        <h2 className="text-4xl text-center">
+      {/* Roadmap */}
+      <div className="flex flex-col items-center p-4 text-warning bg-slate-900 ">
+        <h2 className="text-4xl text-center font-mono">
           Got the basics, <strong>now what?</strong>
         </h2>
         <div className="flex flex-col md:flex-row items-center gap-6 ">
@@ -87,7 +88,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
-            <p className="text-xl max-w-lg">
+            <p className="text-xl max-w-lg font-mono">
               To create production ready dApps from scratch using{" "}
               <Link className="underline" target="_blank" href="https://scaffoldeth.io/">
                 Scaffold-ETH 2
@@ -104,9 +105,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 2. AI */}
+      {/* AI */}
       <div className="flex flex-col items-center p-4 bg-secondary">
-        <h2 className="text-4xl text-center">Use AI as a pair programmer and learning buddy</h2>
+        <h2 className="text-4xl text-center font-mono">Use AI as a pair programmer and learning buddy</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -116,7 +117,7 @@ const Home: NextPage = () => {
 
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2">
-            <p className="text-xl max-w-lg">Reccomended:</p>
+            <p className="text-xl max-w-lg font-mono">Reccomended:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://chat.openai.com/" target="_blank" className="underline">
@@ -141,7 +142,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
-            <p className="text-xl max-w-lg">Suggested:</p>
+            <p className="text-xl max-w-lg font-mono">More resources:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://www.youtube.com/watch?v=jHv63Uvk5VA" target="_blank" className="underline">
@@ -173,9 +174,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 3. Frontend */}
+      {/* Frontend */}
       <div className="flex flex-col items-center p-4">
-        <h2 className="text-4xl text-center">Learn modern frontend development...</h2>
+        <h2 className="text-4xl text-center font-mono">Learn modern frontend development...</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6">
           {/* This div will be on the left on larger screens */}
@@ -185,7 +186,7 @@ const Home: NextPage = () => {
 
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
-            <p className="text-xl max-w-lg">Learn React, Next.js and TypeScript:</p>
+            <p className="text-xl font-mono">Learn React, Next.js and TypeScript:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://www.youtube.com/watch?v=MsnQ5uepIaE" target="_blank" className="underline">
@@ -205,7 +206,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
-            <p className="text-xl max-w-lg">Other resources:</p>
+            <p className="text-xl font-mono">More resources:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://react.dev/" target="_blank" className="underline">
@@ -238,9 +239,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 4. Solidity */}
+      {/* Solidity */}
       <div className="flex flex-col items-center p-4 bg-primary">
-        <h2 className="text-4xl text-center">Learn Solidity (smart contracts)...</h2>
+        <h2 className="text-4xl text-center font-mono">Learn Solidity (smart contracts)...</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -250,8 +251,8 @@ const Home: NextPage = () => {
 
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2">
-            <div className="bg-green-600 text-white pl-6 rounded-md">
-              <p className="text-xl max-w-lg">BuidlGuidl learning material:</p>
+            <div className="bg-green-600 text-white pl-6 pt-1 pb-4 rounded-md">
+              <p className="text-xl max-w-lg font-mono">BuidlGuidl learning material:</p>
               <ul className="list-disc">
                 <li>
                   <Link
@@ -272,7 +273,7 @@ const Home: NextPage = () => {
                 </li>
               </ul>
             </div>
-            <p className="text-xl max-w-lg">Suggested courses:</p>
+            <p className="text-xl max-w-lg font-mono">Suggested courses:</p>
             <ul className="list-disc">
               <li>
                 (Foundry){" "}
@@ -298,7 +299,7 @@ const Home: NextPage = () => {
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
             {" "}
-            <p className="text-xl max-w-lg">Other resources:</p>
+            <p className="text-xl max-w-lg font-mono">More resources:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://learnweb3.io/" className="underline" target="_blank">
@@ -330,9 +331,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 6. dApp tutorials */}
+      {/* dApp tutorials */}
       <div className="flex flex-col items-center p-6 bg-secondary">
-        <h2 className="text-4xl text-center">Get started creating dApps!</h2>
+        <h2 className="text-4xl text-center font-mono">Get started creating dApps!</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -342,7 +343,7 @@ const Home: NextPage = () => {
 
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
-            <p className="text-xl">See Scaffold-ETH 2 in action:</p>
+            <p className="text-xl font-mono">See Scaffold-ETH 2 in action:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://www.youtube.com/watch?v=trNWg8sXzcE" className="underline" target="_blank">
@@ -367,7 +368,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
-            <p className="text-xl max-w-lg">More resources:</p>
+            <p className="text-xl max-w-lg font-mono">More resources:</p>
             <ul className="list-disc">
               <li>
                 <Link
@@ -403,9 +404,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 7. BuildGuidl intro */}
+      {/* BuildGuidl intro */}
       <div className="flex flex-col items-center p-6 bg-slate-950 text-success">
-        <h2 className="text-4xl text-center">Let’s get you that 0.5 ETH stream now!</h2>
+        <h2 className="text-4xl text-center font-mono">Let’s get you that 0.5 ETH stream now!</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6" min-w-full>
           {/* This div will be on the left on larger screens */}
@@ -415,7 +416,7 @@ const Home: NextPage = () => {
 
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2">
-            <p className="text-xl ">
+            <p className="text-xl font-mono">
               To get rewarded, you must be <strong>meaningfully contributing to the ecosystem</strong> in some ways:
             </p>
             <ul className="list-disc">
@@ -439,7 +440,7 @@ const Home: NextPage = () => {
               </li>
             </ul>
 
-            <p className="text-xl ">Learn more about streams:</p>
+            <p className="text-xl font-mono">Learn more about streams:</p>
             <ul className="list-disc">
               <li>
                 <Link
@@ -465,7 +466,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3 bg-green-600 text-white pl-6 pb-6 rounded-md">
-            <p className="text-xl max-w-lg">Use GitHub to collaborate with peers:</p>
+            <p className="text-xl max-w-lg font-mono">Use GitHub to collaborate with peers:</p>
             <ul className="list-disc">
               <li>
                 <Link
@@ -522,9 +523,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 8. Build ideas */}
+      {/* Build ideas */}
       <div className="flex flex-col items-center p-4 bg-slate-900 text-warning">
-        <h2 className="text-4xl text-center">Don&apos;t know what to build?</h2>
+        <h2 className="text-4xl text-center font-mono">Don&apos;t know what to build?</h2>
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/3 flex justify-center">
@@ -536,7 +537,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
-            <p className="text-xl ">You can get some ideas from here:</p>
+            <p className="text-xl font-mono">You can get some ideas from here:</p>
             <ul className="list-disc">
               <li>
                 <Link
@@ -571,9 +572,38 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 5. Frontend hooks */}
-      <div className="flex flex-col items-center p-4">
-        <h2 className="text-4xl text-center">Make your frontend interact with smart contracts...</h2>
+      {/* Mint donation NFT */}
+      <div className="flex flex-col items-center p-4 bg-slate-600 text-blue-300">
+        <h2 className="text-4xl text-center font-mono">Found this site helpful?</h2>
+        <div className="flex flex-col md:flex-row items-center gap-6 ">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/3 flex justify-center">
+            <span className="text-8xl pt-4">😇</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2">
+            <p className="text-xl font-mono">
+              Consider{" "}
+              <Link href="mint" className="underline ">
+                minting an NFT
+              </Link>{" "}
+              and making a donation!
+            </p>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-2/3">
+            <Link href="mint">
+              <Image src="nft.svg" alt="NFT Image" className="h-64 min-w-full" width={150} height={150} />
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Frontend hooks */}
+      <div className="flex flex-col items-center p-4 bg-primary">
+        <h2 className="text-4xl text-center font-mono">Make your frontend interact with smart contracts...</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -583,7 +613,7 @@ const Home: NextPage = () => {
 
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
-            <p className="text-xl max-w-lg">Learn Scaffold-ETH 2 and Wagmi hooks:</p>
+            <p className="text-xl max-w-lg font-mono">Learn Scaffold-ETH 2 and its hooks:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://scaffoldeth.io/" className="underline" target="_blank">
@@ -600,7 +630,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
-            <p className="text-xl ">More tools:</p>
+            <p className="text-xl font-mono">More tools:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://wagmi.sh/core/getting-started" className="underline" target="_blank">
@@ -627,9 +657,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 9. Styling */}
-      <div className="flex flex-col items-center p-4 bg-primary">
-        <h2 className="text-4xl text-center">Use modern frontend styling!</h2>
+      {/* Styling */}
+      <div className="flex flex-col items-center p-4 bg-secondary">
+        <h2 className="text-4xl text-center font-mono">Use modern frontend styling!</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -640,7 +670,7 @@ const Home: NextPage = () => {
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
             {" "}
-            <p className="text-xl">TailwindCSS and daisyUI:</p>
+            <p className="text-xl font-mono">TailwindCSS and daisyUI:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://tailwindcss.com/" target="_blank" className="underline">
@@ -664,7 +694,7 @@ const Home: NextPage = () => {
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
             {" "}
-            <p className="text-xl max-w-lg">Alternative:</p>
+            <p className="text-xl font-mono">Alternative:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://chakra-ui.com/getting-started" className="underline" target="_blank">
@@ -691,9 +721,9 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 0. Bonus */}
+      {/* Bonus */}
       <div className="flex flex-col items-center p-4">
-        <h2 className="text-4xl">More resources!</h2>
+        <h2 className="text-4xl font-mono">More resources!</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -703,7 +733,7 @@ const Home: NextPage = () => {
 
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2">
-            <p className="text-xl ">Get on the right mindset:</p>
+            <p className="text-xl font-mono">Get on the right mindset:</p>
             <ul className="list-disc">
               <li>
                 <Link
@@ -721,7 +751,7 @@ const Home: NextPage = () => {
               </li>
             </ul>
 
-            <p className="text-xl ">Learn about why all this is important and useful:</p>
+            <p className="text-xl font-mono">Learn about why all this is important and useful:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://www.notboring.co/p/the-great-online-game" className="underline" target="_blank">
@@ -739,7 +769,7 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/3">
-            <p className="text-xl max-w-lg">Learn on the go:</p>
+            <p className="text-xl font-mono">Learn on the go:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://www.freecodecamp.org/learn" className="underline" target="_blank">
@@ -748,7 +778,7 @@ const Home: NextPage = () => {
                 - Reccomended JavaScript Algorithms and Data Structures, and Front End Development Libraries
               </li>
             </ul>
-            <p className="text-xl max-w-lg">Learn Docker and GraphQL:</p>
+            <p className="text-xl font-mono">Learn Docker and GraphQL:</p>
             <ul className="list-disc">
               <li>
                 <Link href="https://www.youtube.com/watch?v=ed8SzALpx1Q" className="underline" target="_blank">
