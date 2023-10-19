@@ -11,7 +11,7 @@ const Home: NextPage = () => {
         <div className="hero-content flex-col lg:flex-row-reverse">
           <figure>
             <Image
-              alt="Have experience? No, sir. I hope you will gain some here. You're hired."
+              alt="Meme: Have experience? No, sir. I hope you will gain some here. You're hired."
               src="/experience.jpg"
               width={500}
               height={500}
@@ -26,7 +26,7 @@ const Home: NextPage = () => {
               <Link className="underline" href="./learn">
                 free learning resources
               </Link>{" "}
-              will get you started.
+              will get you started 🐣
               <br />
               <strong className="text-yellow-500">Got web3 skills?</strong> Go to{" "}
               <Link className="underline" href="https://speedrunethereum.com/" target="_blank">
@@ -38,15 +38,15 @@ const Home: NextPage = () => {
                 <Link className="underline" href="https://buidlguidl.com/" target="_blank">
                   BuidlGuidl
                 </Link>
-              </strong>
-              .
+              </strong>{" "}
+              🏰
               <br />
               <strong className="text-green-500">After you join, build dApps</strong> for the Ethereum blockchain with{" "}
               <strong>
                 <Link className="underline" href="https://scaffoldeth.io/" target="_blank">
                   Scaffold-ETH 2
                 </Link>
-                , an open source toolkit
+                , a modern tech stack for building smart contract apps ✨
               </strong>
               .
             </p>

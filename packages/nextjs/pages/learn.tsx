@@ -16,6 +16,9 @@ const Home: NextPage = () => {
               To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
               started:
             </p>
+            <div className="bg-green-600 text-white text-center rounded-md">
+              Sections hightlighted in green are the MOST IMPORTANT ones
+            </div>
           </div>
         </div>
       </div>
@@ -48,23 +51,25 @@ const Home: NextPage = () => {
                 </Link>
               </li>
             </ul>
-            <p className="text-xl max-w-lg">Learn web development and JavaScript:</p>
-            <ul className="list-disc">
-              <li>
-                <Link
-                  href="https://www.theodinproject.com/paths/foundations/courses/foundations"
-                  target="_blank"
-                  className="underline"
-                >
-                  Foundations Course - The Odin Project
-                </Link>
-              </li>
-              <li>
-                <Link href="https://university.alchemy.com/overview/js" target="_blank" className="underline">
-                  Learn JavaScript - Alchemy University
-                </Link>
-              </li>
-            </ul>
+            <div className="bg-green-600 text-white pl-6 rounded-md">
+              <p className="text-xl max-w-lg">Learn web development and JavaScript:</p>
+              <ul className="list-disc">
+                <li>
+                  <Link
+                    href="https://www.theodinproject.com/paths/foundations/courses/foundations"
+                    target="_blank"
+                    className="underline"
+                  >
+                    Foundations Course - The Odin Project
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://university.alchemy.com/overview/js" target="_blank" className="underline">
+                    Learn JavaScript - Alchemy University
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -179,7 +184,7 @@ const Home: NextPage = () => {
           </div>
 
           {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
             <p className="text-xl max-w-lg">Learn React, Next.js and TypeScript:</p>
             <ul className="list-disc">
               <li>
@@ -245,26 +250,28 @@ const Home: NextPage = () => {
 
           {/* This div will be in the middle on larger screens */}
           <div className="md:w-1/2">
-            <p className="text-xl max-w-lg">BuidlGuidl learning material:</p>
-            <ul className="list-disc">
-              <li>
-                <Link
-                  href="https://www.youtube.com/watch?v=zuJ-elbo88E&list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69"
-                  className="underline font-bold"
-                  target="_blank"
-                >
-                  Web2 to Web3 YouTube playlist
-                </Link>{" "}
-                (learn web3 concepts and <strong>complete SpeedRunEthereum challenges</strong>)
-              </li>
+            <div className="bg-green-600 text-white pl-6 rounded-md">
+              <p className="text-xl max-w-lg">BuidlGuidl learning material:</p>
+              <ul className="list-disc">
+                <li>
+                  <Link
+                    href="https://www.youtube.com/watch?v=zuJ-elbo88E&list=PLJz1HruEnenAf80uOfDwBPqaliJkjKg69"
+                    className="underline font-bold"
+                    target="_blank"
+                  >
+                    Web2 to Web3 YouTube playlist
+                  </Link>{" "}
+                  (learn web3 concepts and <strong>complete SpeedRunEthereum challenges</strong>)
+                </li>
 
-              <li>
-                <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" target="_blank" className="underline">
-                  Scaffold-ETH - general developer chat
-                </Link>{" "}
-                (Telegram)
-              </li>
-            </ul>
+                <li>
+                  <Link href="https://t.me/joinchat/KByvmRe5wkR-8F_zz6AjpA" target="_blank" className="underline">
+                    Scaffold-ETH - general developer chat
+                  </Link>{" "}
+                  (Telegram)
+                </li>
+              </ul>
+            </div>
             <p className="text-xl max-w-lg">Suggested courses:</p>
             <ul className="list-disc">
               <li>
@@ -323,62 +330,6 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* 5. Frontend hooks */}
-      <div className="flex flex-col items-center p-4">
-        <h2 className="text-4xl text-center">Make your frontend interact with smart contracts...</h2>
-
-        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
-          {/* This div will be on the left on larger screens */}
-          <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🦃</span>
-          </div>
-
-          {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
-            <p className="text-xl max-w-lg">Learn Scaffold-ETH 2 and Wagmi hooks:</p>
-            <ul className="list-disc">
-              <li>
-                <Link href="https://scaffoldeth.io/" className="underline" target="_blank">
-                  Scaffold-ETH 2 - Getting started
-                </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline" target="_blank">
-                  Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
-                </Link>{" "}
-              </li>
-            </ul>
-          </div>
-
-          {/* This div will be on the right on larger screens */}
-          <div className="md:w-1/3">
-            <p className="text-xl ">More tools:</p>
-            <ul className="list-disc">
-              <li>
-                <Link href="https://wagmi.sh/core/getting-started" className="underline" target="_blank">
-                  Wagmi - Getting started
-                </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://viem.sh/docs/getting-started.html" className="underline" target="_blank">
-                  Viem - Getting Started
-                </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://docs.ethers.org/v6/" className="underline" target="_blank">
-                  Ethers - Documentation
-                </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://www.rainbowkit.com/docs/introduction" className="underline" target="_blank">
-                  RainbowKit - Introduction
-                </Link>{" "}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       {/* 6. dApp tutorials */}
       <div className="flex flex-col items-center p-6 bg-secondary">
         <h2 className="text-4xl text-center">Get started creating dApps!</h2>
@@ -390,7 +341,7 @@ const Home: NextPage = () => {
           </div>
 
           {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
             <p className="text-xl">See Scaffold-ETH 2 in action:</p>
             <ul className="list-disc">
               <li>
@@ -410,12 +361,6 @@ const Home: NextPage = () => {
                   npx create-eth session building a live app on Ethereum
                 </Link>{" "}
                 (45 min video)
-              </li>
-              <li>
-                <Link href="https://www.youtube.com/watch?v=Gspa3YL6Rqk" className="underline" target="_blank">
-                  Introduction to Full Stack dApp Development (with The Graph)
-                </Link>{" "}
-                (1:30 hs video)
               </li>
             </ul>
           </div>
@@ -446,6 +391,12 @@ const Home: NextPage = () => {
                 <Link href="https://youtu.be/vZpv9qHMSRY?si=tNeQoUGiTowuYH8Q" className="underline" target="_blank">
                   Scaffold-ETH-2: building decentralized applications
                 </Link>
+              </li>
+              <li>
+                <Link href="https://www.youtube.com/watch?v=Gspa3YL6Rqk" className="underline" target="_blank">
+                  Introduction to Full Stack dApp Development (with The Graph)
+                </Link>{" "}
+                (1:30 hs video)
               </li>
             </ul>
           </div>
@@ -513,7 +464,7 @@ const Home: NextPage = () => {
           </div>
 
           {/* This div will be on the right on larger screens */}
-          <div className="md:w-1/3">
+          <div className="md:w-1/3 bg-green-600 text-white pl-6 pb-6 rounded-md">
             <p className="text-xl max-w-lg">Use GitHub to collaborate with peers:</p>
             <ul className="list-disc">
               <li>
@@ -620,9 +571,65 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* 5. Frontend hooks */}
+      <div className="flex flex-col items-center p-4">
+        <h2 className="text-4xl text-center">Make your frontend interact with smart contracts...</h2>
+
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🦃</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
+            <p className="text-xl max-w-lg">Learn Scaffold-ETH 2 and Wagmi hooks:</p>
+            <ul className="list-disc">
+              <li>
+                <Link href="https://scaffoldeth.io/" className="underline" target="_blank">
+                  Scaffold-ETH 2 - Getting started
+                </Link>{" "}
+              </li>
+              <li>
+                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline" target="_blank">
+                  Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            <p className="text-xl ">More tools:</p>
+            <ul className="list-disc">
+              <li>
+                <Link href="https://wagmi.sh/core/getting-started" className="underline" target="_blank">
+                  Wagmi - Getting started
+                </Link>{" "}
+              </li>
+              <li>
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline" target="_blank">
+                  Viem - Getting Started
+                </Link>{" "}
+              </li>
+              <li>
+                <Link href="https://docs.ethers.org/v6/" className="underline" target="_blank">
+                  Ethers - Documentation
+                </Link>{" "}
+              </li>
+              <li>
+                <Link href="https://www.rainbowkit.com/docs/introduction" className="underline" target="_blank">
+                  RainbowKit - Introduction
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* 9. Styling */}
       <div className="flex flex-col items-center p-4 bg-primary">
-        <h2 className="text-4xl text-center">Learn modern frontend styling!</h2>
+        <h2 className="text-4xl text-center">Use modern frontend styling!</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -631,7 +638,7 @@ const Home: NextPage = () => {
           </div>
 
           {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
             {" "}
             <p className="text-xl">TailwindCSS and daisyUI:</p>
             <ul className="list-disc">
