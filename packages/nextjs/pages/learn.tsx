@@ -34,25 +34,26 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-2/3">
-            <p className="text-xl max-w-lg font-mono">Basics about Ethereum and web3:</p>
-            <ul className="list-disc">
-              <li>
-                <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
-                  What is web3 and why is it important?
-                </Link>
-              </li>
-              <li>
-                <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
-                  What is Ethereum?
-                </Link>
-              </li>
-              <li>
-                <Link href="https://ethereum.foundation/infinitegarden" target="_blank" className="underline">
-                  The Infinite Garden
-                </Link>
-              </li>
-            </ul>
-            <div className="bg-green-600 text-white pl-6 rounded-md">
+            <div className="bg-green-600 text-white pl-6 pb-2 rounded-md">
+              <p className="text-xl max-w-lg font-mono">Basics about Ethereum and web3:</p>
+              <ul className="list-disc">
+                <li>
+                  <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
+                    What is web3 and why is it important?
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
+                    What is Ethereum?
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://ethereum.foundation/infinitegarden" target="_blank" className="underline">
+                    The Infinite Garden
+                  </Link>
+                </li>
+              </ul>
+
               <p className="text-xl max-w-lg font-mono">Learn web development and JavaScript:</p>
               <ul className="list-disc">
                 <li>
@@ -116,7 +117,7 @@ const Home: NextPage = () => {
           </div>
 
           {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-4 rounded-md">
             <p className="text-xl max-w-lg font-mono">Reccomended:</p>
             <ul className="list-disc">
               <li>
