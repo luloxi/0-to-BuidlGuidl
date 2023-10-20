@@ -30,9 +30,23 @@ const Home: NextPage = () => {
       <MetaHeader />
       <div className="flex flex-col items-center p-4">
         <h1 className="text-5xl font-mono">Donate and get an NFT!</h1>
+        <p className="max-w-lg font-mono">
+          These NFTs are fully stored and rendered with information stored in the blockchain using SVG technology. When
+          you mint one of these NFTs, you&apos;re getting an eternal on-chain display of support.
+        </p>
+      </div>
+
+      <div className="flex justify-center items-center gap-3">
+        <div className="inline-block">
+          <EtherInput value={mintValue.toString()} onChange={(newValue: string) => setMintValue(newValue.toString())} />
+        </div>
+        <button className="btn btn-accent" onClick={() => mintNft()}>
+          Mint NFT!
+        </button>
+      </div>
+
+      <div className="flex flex-col items-center">
         <p className="text-lg max-w-lg text-center">
-          Found this repo useful? Please consider a donation.
-          <br />
           <span className="text-sm text-center">(minimum is 0.01 ETH, else you need it more than us 😜)</span>
         </p>
 
@@ -50,15 +64,6 @@ const Home: NextPage = () => {
           </Link>{" "}
           to fund public goods (like this page!).
         </p>
-      </div>
-
-      <div className="flex justify-center items-center gap-3">
-        <div className="inline-block">
-          <EtherInput value={mintValue.toString()} onChange={(newValue: string) => setMintValue(newValue.toString())} />
-        </div>
-        <button className="btn btn-accent" onClick={() => mintNft()}>
-          Mint NFT!
-        </button>
       </div>
 
       <NFTContainer connectedAddress={connectedAddress} />
