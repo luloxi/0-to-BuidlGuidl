@@ -6,7 +6,7 @@ import { MetaHeader } from "~~/components/MetaHeader";
 const Home: NextPage = () => {
   return (
     <>
-      <MetaHeader />
+      <MetaHeader title="Learn | 0 to BuidlGuidl" />
 
       {/* Header text */}
       <div className="flex flex-col items-center p-4">

@@ -27,7 +27,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <MetaHeader />
+      <MetaHeader title="Mint NFT | 0 to BuidlGuidl" />
       <div className="flex flex-col items-center p-4">
         <h1 className="text-5xl font-mono">Donate and get an NFT!</h1>
         <p className="max-w-lg font-mono">

@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 
   return (
     <>
-      <MetaHeader />
+      <MetaHeader title="Share | 0 to BuidlGuidl" />
       <div className="flex flex-col items-center p-4">
         <h1 className="text-5xl text-center font-mono">Share this page!</h1>
         <p className="text-xl max-w-lg">Get a friend started into ETH dApps development!</p>
