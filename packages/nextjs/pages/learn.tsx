@@ -12,13 +12,13 @@ const Home: NextPage = () => {
       <div className="flex flex-col items-center p-4">
         <h1 className="text-5xl text-center font-mono">Learn the ETH tech stack!</h1>
         <div className="flex flex-col md:flex-row items-center gap-6 ">
-          <div className="">
+          <div>
             <p className="text-xl max-w-lg font-mono">
               To be able to create your own projects and qualify for an ETH stream, here are some resources to get you
               started
             </p>
             <div className="bg-green-600 text-white text-center rounded-md">
-              Sections hightlighted in green are the MOST IMPORTANT ones
+              Sections highlighted in green are the MOST IMPORTANT ones
             </div>
           </div>
         </div>
@@ -26,6 +26,9 @@ const Home: NextPage = () => {
 
       {/* Intro */}
       <div className="flex flex-col items-center px-4 pb-4 bg-primary">
+        <div className="pt-3 font-mono">
+          If you&apos;re new to web development, get familiar with the basics. Same if you&apos;re new to web3.
+        </div>
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
@@ -34,29 +37,6 @@ const Home: NextPage = () => {
 
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/2">
-            <div className="bg-green-600 text-white pl-6 pb-2 rounded-md">
-              <p className="text-xl max-w-lg font-mono">Basics about Ethereum and web3:</p>
-              <ul className="list-disc">
-                <li>
-                  <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
-                    What is web3 and why is it important?
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
-                    What is Ethereum?
-                  </Link>
-                </li>
-                <li>
-                  <Link href="https://ethereum.foundation/infinitegarden" target="_blank" className="underline">
-                    The Infinite Garden
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="md:w-1/3">
             <div className="bg-green-600 text-white pl-6 pr-2 pb-2 rounded-md">
               <p className="text-xl max-w-lg font-mono">Learn web development and JavaScript:</p>
               <ul className="list-disc">
@@ -72,6 +52,29 @@ const Home: NextPage = () => {
                 <li>
                   <Link href="https://university.alchemy.com/overview/js" target="_blank" className="underline">
                     Learn JavaScript - Alchemy University
+                  </Link>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="md:w-1/3">
+            <div className="bg-green-600 text-white pl-6 pb-2 rounded-md">
+              <p className="text-xl max-w-lg font-mono">Ethereum and web3:</p>
+              <ul className="list-disc">
+                <li>
+                  <Link href="https://ethereum.org/en/web3/" target="_blank" className="underline">
+                    What is web3 and why is it important?
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://ethereum.foundation/ethereum" target="_blank" className="underline">
+                    What is Ethereum?
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://ethereum.foundation/infinitegarden" target="_blank" className="underline">
+                    The Infinite Garden
                   </Link>
                 </li>
               </ul>
@@ -113,6 +116,9 @@ const Home: NextPage = () => {
       {/* AI */}
       <div className="flex flex-col items-center p-4 bg-secondary">
         <h2 className="text-4xl text-center font-mono">Use AI as a pair programmer and learning buddy</h2>
+        <div className="font-mono">
+          Use AI to boost your productivity and learning speed. AI is not here to replace you, but to help you.
+        </div>
 
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
@@ -182,7 +188,9 @@ const Home: NextPage = () => {
       {/* Frontend */}
       <div className="flex flex-col items-center p-4">
         <h2 className="text-4xl text-center font-mono">Learn modern frontend development...</h2>
-
+        <div className="font-mono">
+          Already got the basics of HTML, CSS and JavaScript? Great! Now learn React, Next.js and TypeScript.
+        </div>
         <div className="flex flex-col md:flex-row items-center gap-6">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
@@ -247,7 +255,10 @@ const Home: NextPage = () => {
       {/* Solidity */}
       <div className="flex flex-col items-center p-4 bg-primary">
         <h2 className="text-4xl text-center font-mono">Learn Solidity (smart contracts)...</h2>
-
+        <div className="font-mono md:pb-4">
+          Web3 wouldn&apos;t be web3 without smart contracts. Learn Solidity to be able to create your own smart
+          contracts.
+        </div>
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
@@ -339,7 +350,7 @@ const Home: NextPage = () => {
       {/* dApp tutorials */}
       <div className="flex flex-col items-center p-6 bg-secondary">
         <h2 className="text-4xl text-center font-mono">Get started creating dApps!</h2>
-
+        <div className="font-mono">Learn how to create dApps with Scaffold-ETH 2 by following these tutorials.</div>
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
@@ -609,7 +620,7 @@ const Home: NextPage = () => {
       {/* Frontend hooks */}
       <div className="flex flex-col items-center p-4 bg-primary">
         <h2 className="text-4xl text-center font-mono">Make your frontend interact with smart contracts...</h2>
-
+        <div className="font-mono">Learn more about how to make your frontend interact with smart contracts.</div>
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
@@ -665,7 +676,9 @@ const Home: NextPage = () => {
       {/* Styling */}
       <div className="flex flex-col items-center p-4 bg-secondary">
         <h2 className="text-4xl text-center font-mono">Use modern frontend styling!</h2>
-
+        <div className="font-mono pb-4">
+          Learn how to use modern frontend styling to make your dApps look great fast!
+        </div>
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
           {/* This div will be on the left on larger screens */}
           <div className="md:w-1/6 flex justify-center">
