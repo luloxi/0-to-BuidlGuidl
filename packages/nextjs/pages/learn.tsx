@@ -28,12 +28,12 @@ const Home: NextPage = () => {
       <div className="flex flex-col items-center px-4 pb-4 bg-primary">
         <div className="flex flex-col md:flex-row items-center gap-6 ">
           {/* This div will be on the left on larger screens */}
-          <div className="md:w-1/3 flex justify-center">
+          <div className="md:w-1/6 flex justify-center">
             <span className="text-8xl pt-4">🐣</span>
           </div>
 
           {/* This div will be on the right on larger screens */}
-          <div className="md:w-2/3">
+          <div className="md:w-1/2">
             <div className="bg-green-600 text-white pl-6 pb-2 rounded-md">
               <p className="text-xl max-w-lg font-mono">Basics about Ethereum and web3:</p>
               <ul className="list-disc">
@@ -53,7 +53,11 @@ const Home: NextPage = () => {
                   </Link>
                 </li>
               </ul>
+            </div>
+          </div>
 
+          <div className="md:w-1/3">
+            <div className="bg-green-600 text-white pl-6 pr-2 pb-2 rounded-md">
               <p className="text-xl max-w-lg font-mono">Learn web development and JavaScript:</p>
               <ul className="list-disc">
                 <li>
