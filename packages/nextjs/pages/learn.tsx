@@ -83,36 +83,6 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* Roadmap */}
-      <div className="flex flex-col items-center p-4 text-warning bg-slate-900 ">
-        <h2 className="text-4xl text-center font-mono">
-          Got the basics, <strong>now what?</strong>
-        </h2>
-        <div className="flex flex-col md:flex-row items-center gap-6 ">
-          {/* This div will be on the left on larger screens */}
-          <div className="md:w-1/3 flex justify-center">
-            <span className="text-8xl pt-4">🐥</span>
-          </div>
-
-          {/* This div will be on the right on larger screens */}
-          <div className="md:w-2/3">
-            <p className="text-xl max-w-lg font-mono">
-              To create production ready dApps from scratch using{" "}
-              <Link className="underline" target="_blank" href="https://scaffoldeth.io/">
-                Scaffold-ETH 2
-              </Link>
-              , you need to:
-            </p>
-            <ul className="list-disc">
-              <li>create frontends that can react to smart contracts</li>
-              <li>know how to read, edit and write smart contracts</li>
-              <li>make frontends interact with smart contracts</li>
-              <li>use all that knowledge in a single build! </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       {/* AI */}
       <div className="flex flex-col items-center p-4 bg-secondary">
         <h2 className="text-4xl text-center font-mono">Use AI as a pair programmer and learning buddy</h2>
@@ -185,8 +155,38 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* Roadmap */}
+      <div className="flex flex-col items-center p-4 text-warning bg-slate-900 ">
+        <h2 className="text-4xl text-center font-mono">
+          Got the basics, <strong>now what?</strong>
+        </h2>
+        <div className="flex flex-col md:flex-row items-center gap-6 ">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/3 flex justify-center">
+            <span className="text-8xl pt-4">🐥</span>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-2/3">
+            <p className="text-xl max-w-lg font-mono">
+              To create production ready dApps from scratch using{" "}
+              <Link className="underline" target="_blank" href="https://scaffoldeth.io/">
+                Scaffold-ETH 2
+              </Link>
+              , you need to:
+            </p>
+            <ul className="list-disc">
+              <li>create frontends that can react to smart contracts</li>
+              <li>know how to read, edit and write smart contracts</li>
+              <li>make frontends interact with smart contracts</li>
+              <li>use all that knowledge in a single build! </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* Frontend */}
-      <div className="flex flex-col items-center p-4">
+      <div className="flex flex-col items-center p-4 bg-secondary">
         <h2 className="text-4xl text-center font-mono">Learn modern frontend development...</h2>
         <div className="font-mono">
           Already got the basics of HTML, CSS and JavaScript? Great! Now learn React, Next.js and TypeScript.
@@ -347,8 +347,64 @@ const Home: NextPage = () => {
         </div>
       </div>
 
+      {/* Frontend hooks */}
+      <div className="flex flex-col items-center p-4">
+        <h2 className="text-4xl text-center font-mono">Make your frontend interact with smart contracts...</h2>
+        <div className="font-mono">Learn more about how to make your frontend interact with smart contracts.</div>
+        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
+          {/* This div will be on the left on larger screens */}
+          <div className="md:w-1/6 flex justify-center">
+            <span className="text-8xl pt-4">🦃</span>
+          </div>
+
+          {/* This div will be in the middle on larger screens */}
+          <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
+            <p className="text-xl max-w-lg font-mono">Learn Scaffold-ETH 2 and its hooks:</p>
+            <ul className="list-disc">
+              <li>
+                <Link href="https://scaffoldeth.io/" className="underline" target="_blank">
+                  Scaffold-ETH 2 - Getting started
+                </Link>{" "}
+              </li>
+              <li>
+                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline" target="_blank">
+                  Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+
+          {/* This div will be on the right on larger screens */}
+          <div className="md:w-1/3">
+            <p className="text-xl font-mono">More tools:</p>
+            <ul className="list-disc">
+              <li>
+                <Link href="https://wagmi.sh/core/getting-started" className="underline" target="_blank">
+                  Wagmi - Getting started
+                </Link>{" "}
+              </li>
+              <li>
+                <Link href="https://viem.sh/docs/getting-started.html" className="underline" target="_blank">
+                  Viem - Getting Started
+                </Link>{" "}
+              </li>
+              <li>
+                <Link href="https://docs.ethers.org/v6/" className="underline" target="_blank">
+                  Ethers - Documentation
+                </Link>{" "}
+              </li>
+              <li>
+                <Link href="https://www.rainbowkit.com/docs/introduction" className="underline" target="_blank">
+                  RainbowKit - Introduction
+                </Link>{" "}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       {/* dApp tutorials */}
-      <div className="flex flex-col items-center p-6 bg-secondary">
+      <div className="flex flex-col items-center p-4 bg-secondary">
         <h2 className="text-4xl text-center font-mono">Get started creating dApps!</h2>
         <div className="font-mono">Learn how to create dApps with Scaffold-ETH 2 by following these tutorials.</div>
         <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
@@ -421,7 +477,7 @@ const Home: NextPage = () => {
       </div>
 
       {/* BuildGuidl intro */}
-      <div className="flex flex-col items-center p-6 bg-slate-950 text-success">
+      <div className="flex flex-col items-center p-4 bg-slate-950 text-success">
         <h2 className="text-4xl text-center font-mono">Let’s get you that 0.5 ETH stream now!</h2>
 
         <div className="flex flex-col md:flex-row items-center gap-6" min-w-full>
@@ -617,64 +673,8 @@ const Home: NextPage = () => {
         </div>
       </div>
 
-      {/* Frontend hooks */}
-      <div className="flex flex-col items-center p-4 bg-primary">
-        <h2 className="text-4xl text-center font-mono">Make your frontend interact with smart contracts...</h2>
-        <div className="font-mono">Learn more about how to make your frontend interact with smart contracts.</div>
-        <div className="flex flex-col md:flex-row items-center gap-6 min-w-full">
-          {/* This div will be on the left on larger screens */}
-          <div className="md:w-1/6 flex justify-center">
-            <span className="text-8xl pt-4">🦃</span>
-          </div>
-
-          {/* This div will be in the middle on larger screens */}
-          <div className="md:w-1/2 bg-green-600 text-white pl-6 pb-6 rounded-md">
-            <p className="text-xl max-w-lg font-mono">Learn Scaffold-ETH 2 and its hooks:</p>
-            <ul className="list-disc">
-              <li>
-                <Link href="https://scaffoldeth.io/" className="underline" target="_blank">
-                  Scaffold-ETH 2 - Getting started
-                </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://docs.scaffoldeth.io/hooks/" className="underline" target="_blank">
-                  Interacting with your Smart Contracts - Scaffold-ETH 2 Docs
-                </Link>{" "}
-              </li>
-            </ul>
-          </div>
-
-          {/* This div will be on the right on larger screens */}
-          <div className="md:w-1/3">
-            <p className="text-xl font-mono">More tools:</p>
-            <ul className="list-disc">
-              <li>
-                <Link href="https://wagmi.sh/core/getting-started" className="underline" target="_blank">
-                  Wagmi - Getting started
-                </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://viem.sh/docs/getting-started.html" className="underline" target="_blank">
-                  Viem - Getting Started
-                </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://docs.ethers.org/v6/" className="underline" target="_blank">
-                  Ethers - Documentation
-                </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://www.rainbowkit.com/docs/introduction" className="underline" target="_blank">
-                  RainbowKit - Introduction
-                </Link>{" "}
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-
       {/* Styling */}
-      <div className="flex flex-col items-center p-4 bg-secondary">
+      <div className="flex flex-col items-center p-4 bg-primary">
         <h2 className="text-4xl text-center font-mono">Use modern frontend styling!</h2>
         <div className="font-mono pb-4">
           Learn how to use modern frontend styling to make your dApps look great fast!

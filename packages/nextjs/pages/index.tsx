@@ -30,18 +30,15 @@ const Home: NextPage = () => {
               </Link>{" "}
               will get you started 🐣
               <br />
-              <strong className="text-yellow-500">Got web3 skills?</strong> Go to{" "}
-              <Link className="underline" href="https://speedrunethereum.com/" target="_blank">
-                SpeedRunEthereum
-              </Link>{" "}
-              and{" "}
+              <strong className="text-yellow-500">Got web3 skills?</strong>{" "}
               <strong>
-                complete the challenges to join{" "}
-                <Link className="underline" href="https://buidlguidl.com/" target="_blank">
-                  BuidlGuidl
-                </Link>
-              </strong>{" "}
-              🏰
+                Go to{" "}
+                <Link className="underline" href="https://speedrunethereum.com/" target="_blank">
+                  SpeedRunEthereum
+                </Link>{" "}
+                and complete the challenges{" "}
+              </strong>
+              to join BuidlGuidl 🏰
               <br />
               <strong className="text-green-500">After you join, build dApps</strong> for the Ethereum blockchain with{" "}
               <strong>
