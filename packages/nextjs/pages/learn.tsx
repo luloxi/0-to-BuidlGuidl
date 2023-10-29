@@ -26,7 +26,7 @@ const Home: NextPage = () => {
 
       {/* Intro */}
       <div className="flex flex-col items-center px-4 pb-4 bg-primary">
-        <div className="pt-3 font-mono">
+        <div className="text-xl pt-3 font-mono">
           If you&apos;re new to web development, get familiar with the basics. Same if you&apos;re new to web3.
         </div>
         <div className="flex flex-col md:flex-row items-center gap-6 ">
