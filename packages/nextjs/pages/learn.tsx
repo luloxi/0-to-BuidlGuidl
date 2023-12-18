@@ -41,6 +41,11 @@ const Home: NextPage = () => {
               <p className="text-xl max-w-lg font-mono">Learn web development and JavaScript:</p>
               <ul className="list-disc">
                 <li>
+                  <Link href="https://www.duolingo.com/" target="_blank" className="underline">
+                    Learn English with Duolingo
+                  </Link>
+                </li>
+                <li>
                   <Link
                     href="https://www.theodinproject.com/paths/foundations/courses/foundations"
                     target="_blank"
