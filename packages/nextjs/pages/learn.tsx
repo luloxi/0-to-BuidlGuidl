@@ -38,7 +38,7 @@ const Home: NextPage = () => {
           {/* This div will be on the right on larger screens */}
           <div className="md:w-1/2">
             <div className="bg-green-600 text-white pl-6 pr-2 pb-2 rounded-md">
-              <p className="text-xl max-w-lg font-mono">Learn web development and JavaScript:</p>
+              <p className="text-xl max-w-lg font-mono">Learn english, web development and JavaScript:</p>
               <ul className="list-disc">
                 <li>
                   <Link href="https://www.duolingo.com/" target="_blank" className="underline">
@@ -207,17 +207,22 @@ const Home: NextPage = () => {
             <p className="text-xl font-mono">Learn React, Next.js and TypeScript:</p>
             <ul className="list-disc">
               <li>
-                <Link href="https://www.youtube.com/watch?v=MsnQ5uepIaE" target="_blank" className="underline">
-                  Frontend Web Development: In-Depth Project Tutorial (HTML, CSS, JavaScript, TypeScript, React)
-                </Link>{" "}
-                (10 hs course)
-              </li>
-
-              <li>
                 <Link href="https://www.youtube.com/watch?v=KjY94sAKLlw" target="_blank" className="underline">
                   Next.js React Framework Course – Build and Deploy a Full Stack App From scratch
                 </Link>{" "}
                 (5 hs course)
+              </li>
+              <li>
+                <Link href="https://www.youtube.com/watch?v=bMknfKXIFA8" target="_blank" className="underline">
+                  React Course - Beginner&apos;s Tutorial for React JavaScript Library [2022]
+                </Link>{" "}
+                (12 hs course)
+              </li>
+              <li>
+                <Link href="https://www.youtube.com/watch?v=MsnQ5uepIaE" target="_blank" className="underline">
+                  Frontend Web Development: In-Depth Project Tutorial (HTML, CSS, JavaScript, TypeScript, React)
+                </Link>{" "}
+                (10 hs course)
               </li>
             </ul>
           </div>
@@ -230,12 +235,6 @@ const Home: NextPage = () => {
                 <Link href="https://react.dev/" target="_blank" className="underline">
                   Official React learning site
                 </Link>{" "}
-              </li>
-              <li>
-                <Link href="https://www.youtube.com/watch?v=bMknfKXIFA8" target="_blank" className="underline">
-                  React Course - Beginner&apos;s Tutorial for React JavaScript Library [2022]
-                </Link>{" "}
-                (12 hs course)
               </li>
               <li>
                 <Link href="https://nextjs.org/learn/foundations/about-nextjs" target="_blank" className="underline">
@@ -292,21 +291,21 @@ const Home: NextPage = () => {
                   </Link>{" "}
                   (Telegram)
                 </li>
+                <li>
+                  (Foundry){" "}
+                  <Link
+                    href="https://www.youtube.com/watch?v=umepbfKp5rI&list=PL4Rj_WH6yLgWe7TxankiqkrkVKXIwOP42"
+                    className="underline"
+                    target="_blank"
+                  >
+                    Learn Solidity, Blockchain Development, & Smart Contracts | Powered By AI
+                  </Link>{" "}
+                  (32 hs course)
+                </li>
               </ul>
             </div>
             <p className="text-xl max-w-lg font-mono">Suggested courses:</p>
             <ul className="list-disc">
-              <li>
-                (Foundry){" "}
-                <Link
-                  href="https://www.youtube.com/watch?v=umepbfKp5rI&list=PL4Rj_WH6yLgWe7TxankiqkrkVKXIwOP42"
-                  className="underline"
-                  target="_blank"
-                >
-                  Learn Solidity, Blockchain Development, & Smart Contracts | Powered By AI
-                </Link>{" "}
-                (32 hs course)
-              </li>
               <li>
                 (Hardhat){" "}
                 <Link href="https://www.youtube.com/watch?v=gyMwXuJrbJQ" className="underline" target="_blank">
