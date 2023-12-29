@@ -7,7 +7,12 @@ Onboarding dApp with:
 - Roadmap to join [BuidlGuidl](https://buidlguidl.com/)
 - Roadmap to get started building with [Scaffold-ETH 2](https://scaffoldeth.io/)
 - QR share for live events
-- Dynamic SVG NFT
+- Dynamic SVG NFT as a receipt after donating
+
+- 🐣 Project being developed by [Newbie's Lounge](https://lulox.notion.site/Newbie-s-Lounge-68ea7c4c5f1a4ec29786be6a76516878)
+- 👷‍♀️ To view current development tasks, [join this Trello board](https://trello.com/invite/b/s0vot1BA/ATTI366c508087a404ccf9343def4d76d1ce6F7899AA/newbies-lounge).
+- 🧰 To chat with other buidlers about this project, [join our Telegram group](https://t.me/+FwCZPG51UhwzOTZh)
+- 🛠️ To collaborate, [fork and pull](https://github.com/susam/gitpr) a request to this repo.
 
 Built using [Scaffold-ETH 2](https://scaffoldeth.io/) | NextJS, RainbowKit, Hardhat, Wagmi, Typescript, TailwindCSS and daisyUI
 
